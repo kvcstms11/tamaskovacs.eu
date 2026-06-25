@@ -4,464 +4,397 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Tamás Kovács — Create. Build. Reach.</title>
-<meta name="description" content="Termékeket építek és piacokat magyarázok. Piacradar, Ausztria Radar, 50K+ követő.">
+<meta name="description" content="Digitális termékeket építek és piacra viszek. Piacradar, Ausztria Radar, 50K+ követő.">
+<link rel="canonical" href="https://tamaskovacs.eu/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tamaskovacs.eu/">
 <meta property="og:title" content="Tamás Kovács — Create. Build. Reach.">
-<meta property="og:description" content="Termék · Tartalom · Elérés">
+<meta property="og:description" content="I build and ship digital products — from strategy to launch. Product, growth, and distribution.">
+<meta property="og:locale" content="en">
+<meta property="og:locale:alternate" content="hu">
+<meta property="og:image" content="https://tamaskovacs.eu/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tamaskovacs.eu/og-image.jpg">
+<meta name="twitter:site" content="@kvcstms11">
+<meta name="author" content="Tamás Kovács">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
+<link rel="icon" type="image/png" href="./favicon.png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@400;500;600;700;… rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "name":"Tamás Kovács",
+      "url":"https://tamaskovacs.eu",
+      "description":"I build and ship digital products — from strategy to launch.",
+      "inLanguage":["en","hu"]
+    },
+    {
+      "@type":"Person",
+      "name":"Tamás Kovács",
+      "url":"https://tamaskovacs.eu",
+      "jobTitle":"Product Manager",
+      "description":"Product manager and content creator based in Austria. Building Piacradar and Ausztria Radar.",
+      "knowsAbout":["Product Management","5G","IoT","Go-to-Market Strategy","Content Creation"],
+      "sameAs":[
+        "https://www.linkedin.com/in/kvcstms",
+        "https://x.com/kvcstms11",
+        "https://www.instagram.com/officialkovacstamas",
+        "https://www.tiktok.com/@officialkovacstamas",
+        "https://www.youtube.com/@officialkovacstamas",
+        "https://t.me/+Mk5bfbCfUf1lMGE0",
+        "https://www.threads.com/@tamaskovacsofficial"
+      ]
+    }
+  ]
+}
+</script>
 <style>
 :root{
-  --bg:#0B0C10;
-  --surface:rgba(255,255,255,0.04);
-  --surface-solid:#0F1117;
-  --card:rgba(255,255,255,0.03);
-  --card-h:rgba(255,255,255,0.06);
-  --border:rgba(255,255,255,0.08);
-  --border-h:rgba(255,255,255,0.14);
-  --text:#F2F4F8;
-  --text2:rgba(242,244,248,0.72);
-  --text3:rgba(242,244,248,0.45);
-  --accent:#A78BFA;
-  --accent-dim:rgba(167,139,250,0.1);
-  --r:12px;--rs:8px;
-  --font:'Inter',system-ui,-apple-system,sans-serif;
-  --display:'Sora',system-ui,sans-serif;
+  --bg:#08080A;--surface:rgba(255,255,255,0.025);
+  --border:rgba(255,255,255,0.07);--border-l:rgba(255,255,255,0.04);
+  --text:#ECEEF3;--text2:rgba(236,238,243,0.68);--text3:rgba(236,238,243,0.38);
+  --accent:#B49CFF;--accent-dim:rgba(180,156,255,0.08);
+  --font:'DM Sans',system-ui,sans-serif;--display:'Sora',system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+html{scroll-behavior:smooth;background-color:#08080A}
+body{font-family:var(--font);background:transparent;color:var(--text);line-height:1.6;overflow-x:hidden}
 
-.bg-layer{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:linear-gradient(rgba(255,255,255,0.005) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.005) 1px,transparent 1px);
-  background-size:72px 72px}
 
-.bg-portrait{
-  position:fixed;top:-8%;right:-4%;
-  width:55vw;max-width:720px;
-  height:auto;aspect-ratio:2/3;
-  background:url('hero-photo.png') center 8%/cover no-repeat;
-  filter:blur(24px) brightness(0.18) saturate(0.2) contrast(0.9);
-  opacity:0.24;
-  -webkit-mask-image:linear-gradient(to left,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.25) 45%,transparent 70%);
-  mask-image:linear-gradient(to left,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.25) 45%,transparent 70%);
-  z-index:0;pointer-events:none;
+
+/* Portrait BG — body::before pseudo-element, fixed behind everything */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background-image:url('hero-photo-2.jpg');
+  background-size:61vw auto;
+  background-position:top right;
+  background-repeat:no-repeat;
+  filter:blur(18px) brightness(0.4) grayscale(0.5) contrast(1.05);
+  z-index:-2;
+  transform:scale(1.1);
+  pointer-events:none;
 }
+
+
+
+/* BG grid — above portrait, below content */
+.bg-layer{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,0.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.018) 1px,transparent 1px);
+  background-size:80px 80px;opacity:.3}
+
+
 
 #page{position:relative;z-index:1}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;flex-direction:column;background:rgba(11,12,16,0.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
-.nav-top{display:flex;justify-content:space-between;align-items:center;padding:.7rem 1.75rem}
-.nav-logo{font-family:var(--display);font-weight:700;font-size:.95rem;color:var(--text);text-decoration:none;letter-spacing:.04em}
-.nav-right{display:flex;align-items:center;gap:1.2rem}
-.nav-links{display:flex;gap:1.1rem;list-style:none}
-.nav-links a,.nav-links a:visited{color:var(--text2);text-decoration:none;font-size:.76rem;font-weight:500;transition:color .2s;letter-spacing:.01em}
-.nav-links a:hover{color:var(--text)}
-.lang-sw{display:flex;align-items:center;gap:.08rem}
-.lang-btn{background:none;border:none;padding:.18rem .3rem;color:var(--text3);cursor:pointer;font-family:var(--font);font-size:.68rem;font-weight:600;transition:color .2s;border-radius:3px}
+
+
+/* NAV — everything right-aligned except logo */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,10,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-row1{display:flex;align-items:center;max-width:1060px;margin:0 auto;padding:.7rem 1.75rem .45rem;gap:1rem}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1rem;color:var(--text);text-decoration:none;letter-spacing:.04em;margin-right:auto}
+.nav-center{display:flex;align-items:center;gap:1.6rem;list-style:none}
+.nav-center a{color:var(--text3);text-decoration:none;font-size:.72rem;font-weight:500;letter-spacing:.03em;transition:color .2s;text-transform:uppercase}
+.nav-center a:hover,.nav-center a:focus{color:var(--text)}
+.nav-right-area{display:flex;align-items:center;gap:.35rem;flex-shrink:0}
+.nav-links-btn{display:inline-flex;align-items:center;font-family:var(--display);font-weight:600;font-size:.62rem;padding:.28rem .6rem;border:1px solid #FCD34D;border-radius:6px;background:transparent;color:#FCD34D;text-decoration:none;transition:all .2s;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
+.nav-links-btn:hover{background:rgba(252,211,77,0.08);border-color:#FBBF24;color:#FBBF24;transform:translateY(-1px)}
+.lang-sw{display:flex;align-items:center;gap:.1rem}
+.lang-btn{background:none;border:none;padding:.15rem .28rem;color:var(--text3);cursor:pointer;font-family:var(--font);font-size:.65rem;font-weight:600;transition:color .2s;border-radius:3px;letter-spacing:.04em}
 .lang-btn.active{color:var(--text)}
-.lang-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.lang-sep{color:var(--text3);font-size:.6rem}
-.nav-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.15rem;cursor:pointer;padding:.2rem}
+.lang-sep{color:var(--text3);font-size:.55rem;opacity:.5}
+.nav-toggle{display:none;background:none;border:none;color:var(--text);cursor:pointer;padding:.2rem}
+.nav-toggle svg{width:20px;height:20px;stroke:var(--text);stroke-width:2;fill:none}
+/* Social row — right-aligned */
+.nav-row2{display:flex;justify-content:flex-end;align-items:center;gap:.35rem;padding:0 1.75rem .6rem;max-width:1060px;margin:0 auto}
+.nav-socials{display:flex;gap:.3rem;align-items:center}
+.nav-soc{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,.1);text-decoration:none;transition:all .2s;background:transparent}
+.nav-soc:hover{border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.04)}
+.nav-soc svg{width:18px;height:18px;fill:none;stroke:rgba(255,255,255,.82);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-soc--fill svg{fill:rgba(255,255,255,.82);stroke:none}
 
-.nav-socials{display:flex;gap:.35rem;justify-content:center;padding:.15rem 1.75rem .55rem;flex-wrap:wrap}
-.nav-soc{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:7px;border:1px solid rgba(255,255,255,.1);text-decoration:none;transition:all .2s;background:transparent}
-.nav-soc:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.05)}
-.nav-soc:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.nav-soc svg{width:17px;height:17px;fill:none;stroke:rgba(255,255,255,.88);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.nav-soc--fill svg{fill:rgba(255,255,255,.88);stroke:none}
 
-.container{max-width:920px;margin:0 auto;padding:0 1.75rem}
 
-.s-label{font-size:.62rem;text-transform:uppercase;letter-spacing:.12em;color:var(--text3);font-weight:600;margin-bottom:.3rem}
-.s-title{font-family:var(--display);font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;margin-bottom:.5rem;letter-spacing:.01em}
-.s-sub{color:var(--text2);font-size:.85rem;max-width:460px;margin-bottom:2rem;line-height:1.65}
-.section-line{border:none;border-top:1px solid var(--border);margin:0}
-
-.btn-primary{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--display);font-weight:600;font-size:.74rem;padding:.5rem 1.05rem;border:none;border-radius:var(--rs);background:var(--accent);color:var(--bg);cursor:pointer;text-decoration:none;transition:all .2s;white-space:nowrap}
+.container{max-width:1060px;margin:0 auto;padding:0 1.75rem}
+.s-label{font-size:.58rem;text-transform:uppercase;letter-spacing:.18em;color:var(--text3);font-weight:600;margin-bottom:.6rem}
+.s-title{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:.5rem;letter-spacing:-.01em;line-height:1.15}
+.s-sub{color:var(--text2);font-size:.88rem;max-width:460px;margin-bottom:2rem;line-height:1.65}
+.btn-primary{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--display);font-weight:600;font-size:.72rem;padding:.55rem 1.1rem;border:none;border-radius:8px;background:var(--accent);color:var(--bg);cursor:pointer;text-decoration:none;transition:all .2s;white-space:nowrap;letter-spacing:.01em}
 .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
-.btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.btn-ghost,.btn-ghost:visited{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--display);font-weight:600;font-size:.74rem;padding:.45rem .9rem;border:1px solid var(--border);border-radius:var(--rs);background:transparent;color:var(--text3);cursor:pointer;text-decoration:none;transition:all .2s}
-.btn-ghost:hover{color:var(--text);border-color:var(--border-h)}
 
-.hero{min-height:auto;padding:8.5rem 0 3.5rem;display:flex;align-items:flex-start}
-.hero-left{max-width:580px}
-.hero-name{font-family:var(--display);font-size:clamp(.75rem,1.2vw,.92rem);font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.16em;margin-bottom:.4rem;animation:fu .5s ease both}
-.hero-hl{font-family:var(--display);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.05;letter-spacing:.04em;margin-bottom:.35rem;white-space:nowrap;animation:fu .5s .05s ease both}
-.hero-hl .sep{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--text3);vertical-align:middle;margin:0 .1em;position:relative;top:-2px}
-.hero-sub{font-family:var(--display);font-size:.7rem;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1.5rem;animation:fu .5s .08s ease both}
-.hero-desc{font-size:.9rem;color:var(--text2);line-height:1.7;max-width:460px;margin-bottom:1.5rem;animation:fu .5s .12s ease both}
-.hero-stats{display:flex;gap:2.5rem;animation:fu .5s .16s ease both}
-.hs-n{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--text)}
-.hs-l{font-size:.62rem;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;font-weight:500;margin-top:.1rem}
 
-#about{padding:3.5rem 0}
-.about-wrap{max-width:560px}
-.about-wrap h2{font-family:var(--display);font-size:clamp(1.25rem,2.2vw,1.6rem);font-weight:700;margin-bottom:.7rem}
-.about-wrap p{color:var(--text2);font-size:.85rem;line-height:1.75;margin-bottom:.6rem}
-.about-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.9rem}
-.about-tags span{font-size:.58rem;padding:.15rem .45rem;border-radius:4px;border:1px solid var(--border);color:var(--text3);font-weight:500;letter-spacing:.02em}
 
-#building{padding:3.5rem 0}
-.build-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-.build-card{padding:1.35rem 1.4rem;background:var(--card);border:1px solid var(--border);border-radius:var(--r);transition:all .25s}
-.build-card:hover{background:var(--card-h);border-color:var(--border-h)}
-.build-card h3{font-family:var(--display);font-size:.95rem;font-weight:700;margin-bottom:.15rem}
-.build-tag{font-size:.62rem;color:var(--text3);margin-bottom:.5rem;display:block;letter-spacing:.02em}
-.build-card .desc{font-size:.82rem;color:var(--text2);line-height:1.55;margin-bottom:.85rem}
+/* HERO */
+.hero{min-height:auto;padding:8.5rem 0 4.5rem}
+.hero-inner{max-width:600px}
+.hero-name{font-family:var(--display);font-size:clamp(.7rem,1.1vw,.85rem);font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.18em;margin-bottom:.5rem;animation:fu .6s ease both}
+.hero-hl{font-family:var(--display);font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:800;line-height:1.02;letter-spacing:.04em;margin-bottom:.4rem;white-space:nowrap;animation:fu .6s .06s ease both}
+.hero-hl .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);vertical-align:middle;margin:0 .12em;position:relative;top:-3px;opacity:.7}
+.hero-sub{font-family:var(--display);font-size:.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:.12em;margin-bottom:1.5rem;animation:fu .6s .1s ease both}
+.hero-desc{font-size:.92rem;color:var(--text2);line-height:1.7;max-width:460px;margin-bottom:2rem;animation:fu .6s .14s ease both}
+/* Stats — numbers centered over labels */
+.hero-stats{display:flex;gap:3rem;animation:fu .6s .2s ease both}
+.hero-stats > div{text-align:center}
+.hs-n{font-family:var(--display);font-size:1.7rem;font-weight:800;color:var(--text);letter-spacing:-.02em}
+.hs-l{font-size:.6rem;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;font-weight:500;margin-top:.1rem}
+
+
+
+/* ABOUT */
+#about{padding:4rem 0}
+.about-inner{max-width:560px}
+.about-inner h2{font-family:var(--display);font-size:clamp(1.3rem,2.2vw,1.65rem);font-weight:700;margin-bottom:.7rem;letter-spacing:-.01em;line-height:1.2}
+.about-inner p{color:var(--text2);font-size:.88rem;line-height:1.75;margin-bottom:.6rem}
+.about-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:1rem}
+.about-tags span{font-size:.58rem;padding:.18rem .45rem;border-radius:4px;border:1px solid var(--border);color:var(--text3);font-weight:500;letter-spacing:.02em}
+
+
+
+/* PROJECTS */
+#building{padding:4rem 0}
+.build-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.build-item h3{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.15rem;letter-spacing:-.01em}
+.build-tag{font-size:.62rem;color:var(--text3);margin-bottom:.6rem;display:block;letter-spacing:.02em}
+.build-item .desc{font-size:.85rem;color:var(--text2);line-height:1.6;margin-bottom:.9rem}
 .build-actions{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
-.links-row{margin-top:1.75rem;text-align:center}
+.build-sep{width:40px;height:1px;background:var(--border);margin-bottom:1rem}
 
-#delivered{padding:3.5rem 0}
-.del-grid{display:grid;gap:.6rem}
-.del-card{display:grid;grid-template-columns:38px 1fr;gap:.9rem;padding:1.15rem 1.25rem;background:var(--card);border:1px solid var(--border);border-radius:var(--rs);transition:all .25s;align-items:start}
-.del-card:hover{background:var(--card-h);border-color:var(--border-h)}
-.del-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;font-family:var(--display);background:var(--surface);border:1px solid var(--border);flex-shrink:0;margin-top:.1rem;color:var(--text3)}
-.del-top{display:flex;justify-content:space-between;align-items:baseline;gap:.75rem;flex-wrap:wrap}
-.del-top h4{font-family:var(--display);font-size:.84rem;font-weight:700}
-.del-outcome{font-size:.68rem;color:var(--accent);font-weight:500}
-.del-meta{font-size:.62rem;color:var(--text3);margin-top:.1rem}
-.del-desc{font-size:.78rem;color:var(--text2);line-height:1.55;margin-top:.35rem}
-.del-pills{display:flex;gap:.25rem;margin-top:.35rem}
-.del-pills span{font-size:.54rem;padding:.12rem .38rem;border-radius:3px;border:1px solid var(--border);color:var(--text3);letter-spacing:.02em}
-.del-more{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.del-more.open{max-height:600px}
-.del-toggle{display:inline-flex;align-items:center;gap:.22rem;margin-top:.8rem;font-family:var(--font);font-size:.72rem;color:var(--text3);background:none;border:1px solid var(--border);border-radius:100px;padding:.32rem .85rem;cursor:pointer;transition:all .2s}
-.del-toggle:hover{color:var(--text);border-color:var(--border-h)}
-.del-toggle .arr{transition:transform .3s;display:inline-block}
-.del-toggle.open .arr{transform:rotate(180deg)}
 
-#contact{padding:3.5rem 0}
-.c-form-wrap{max-width:480px}
+
+/* DELIVERED */
+#delivered{padding:4rem 0}
+.del-list{display:grid;gap:0}
+.del-entry{padding:1.25rem 0;border-bottom:1px solid var(--border-l);display:grid;grid-template-columns:42px 1fr;gap:1rem;align-items:start;transition:all .3s}
+.del-entry:first-child{border-top:1px solid var(--border-l)}
+.del-entry:hover{background:rgba(255,255,255,.012);margin:0 -.5rem;padding-left:.5rem;padding-right:.5rem;border-radius:6px}
+.del-icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;font-family:var(--display);background:var(--surface);border:1px solid var(--border);color:var(--text3);margin-top:.15rem}
+.del-head{display:flex;justify-content:space-between;align-items:baseline;gap:.75rem;flex-wrap:wrap}
+.del-head h4{font-family:var(--display);font-size:.88rem;font-weight:700;letter-spacing:-.005em}
+.del-outcome{font-size:.65rem;color:var(--accent);font-weight:500;letter-spacing:.01em}
+.del-year{font-size:.6rem;color:var(--text3);margin-top:.15rem;letter-spacing:.03em}
+.del-desc{font-size:.8rem;color:var(--text2);line-height:1.55;margin-top:.35rem}
+
+
+
+/* CONTACT */
+#contact{padding:4rem 0 3rem}
+.c-form-wrap{max-width:500px}
 .c-form{display:flex;flex-direction:column;gap:.75rem}
 .fg{display:flex;flex-direction:column;gap:.2rem}
-.fg label{font-size:.62rem;text-transform:uppercase;letter-spacing:.12em;color:var(--text3);font-weight:600}
-.fg input,.fg textarea,.fg select{background:var(--card);border:1px solid var(--border);border-radius:var(--rs);padding:.65rem .85rem;color:var(--text);font-family:var(--font);font-size:.85rem;transition:border-color .2s;outline:none}
+.fg label{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--text3);font-weight:600}
+.fg input,.fg textarea,.fg select{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:.7rem .85rem;color:var(--text);font-family:var(--font);font-size:.85rem;transition:border-color .2s;outline:none}
 .fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--accent)}
 .fg textarea{resize:vertical;min-height:80px}
-.fg select option{background:var(--surface-solid);color:var(--text)}
+.fg select option{background:#0C0C0F;color:var(--text)}
 .f-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
-.btn-sub{font-family:var(--display);font-weight:600;font-size:.78rem;padding:.72rem 1.25rem;border:none;border-radius:var(--rs);background:var(--accent);color:var(--bg);cursor:pointer;transition:all .2s;margin-top:.2rem}
+.btn-sub{font-family:var(--display);font-weight:600;font-size:.78rem;padding:.75rem 1.3rem;border:none;border-radius:8px;background:var(--accent);color:var(--bg);cursor:pointer;transition:all .2s;margin-top:.2rem;letter-spacing:.01em}
 .btn-sub:hover{opacity:.88;transform:translateY(-1px)}
-.btn-sub:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-
-footer{padding:1.75rem 0;text-align:center;font-size:.62rem;color:var(--text3);border-top:1px solid var(--border)}
-
-.mobile-menu{display:none;position:fixed;inset:0;z-index:99;background:rgba(11,12,16,0.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:1.8rem}
-.mobile-menu.open{display:flex}
-.mobile-menu a,.mobile-menu a:visited{font-family:var(--display);font-size:1.1rem;font-weight:600;color:var(--text);text-decoration:none;transition:color .2s}
-.mobile-menu a:hover{color:var(--accent)}
-.mobile-close{position:absolute;top:1rem;right:1.2rem;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer}
-
-@keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-.fi{opacity:0;transform:translateY(14px);transition:all .45s cubic-bezier(.4,0,.2,1)}
+.form-msg{font-size:.75rem;margin-top:.5rem;display:none}
+.f-privacy{font-size:.62rem;color:var(--text3);line-height:1.5;margin-top:.5rem}
+.f-privacy a{color:var(--text2);text-decoration:underline;text-underline-offset:2px;transition:color .2s}
+.f-privacy a:hover{color:var(--accent)}
+.form-msg.ok{color:#6ee7b7;display:block}
+.form-msg.err{color:#fca5a5;display:block}
+footer{padding:2rem 0;text-align:center;font-size:.6rem;color:var(--text3);letter-spacing:.02em}
+@keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.fi{opacity:0;transform:translateY(16px);transition:all .5s cubic-bezier(.4,0,.15,1)}
 .fi.v{opacity:1;transform:translateY(0)}
-
-@media(prefers-reduced-motion:reduce){
-  .fi{opacity:1;transform:none;transition:none}
-  @keyframes fu{from{opacity:1;transform:none}to{opacity:1;transform:none}}
-}
-
+.mob-menu{display:none;position:fixed;inset:0;z-index:99;background:rgba(8,8,10,.96);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.mob-menu.open{display:flex}
+.mob-menu a{font-family:var(--display);font-size:1.3rem;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:.03em;text-transform:uppercase}
+.mob-menu a:hover{color:var(--accent)}
+.mob-close{position:absolute;top:1rem;right:1rem;background:none;border:none;color:var(--text);cursor:pointer;font-size:1.5rem}
 @media(max-width:768px){
-  .nav-top{padding:.6rem 1rem}
-  .nav-links{display:none}
-  .nav-toggle{display:block}
-  .nav-socials{gap:.28rem;padding:.1rem 1rem .45rem;overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .nav-socials::-webkit-scrollbar{display:none}
-  .nav-soc{width:30px;height:30px;border-radius:6px;flex-shrink:0}
-  .nav-soc svg{width:15px;height:15px}
+  body::before{background-size:auto 70vh;background-position:right center}
+  .nav-row1{padding:.6rem 1rem .35rem}.nav-row2{padding:0 1rem .5rem}
+  .nav-center{display:none}.nav-toggle{display:block}
+  .nav-socials{gap:.25rem}.nav-soc{width:32px;height:32px;border-radius:7px}.nav-soc svg{width:16px;height:16px}
   .container{padding:0 1.1rem}
-  .hero{padding:7rem 0 2.5rem}
-  .hero-hl{white-space:normal;letter-spacing:.02em;font-size:clamp(1.9rem,7.5vw,2.6rem)}
-  .hero-stats{gap:1.5rem;flex-wrap:wrap}
-  .hs-n{font-size:1.2rem}
+  .hero{padding:7rem 0 3rem}
+  .hero-hl{white-space:normal;font-size:clamp(2rem,8vw,2.8rem);letter-spacing:.02em}
+  .hero-stats{gap:1.5rem;flex-wrap:wrap}.hs-n{font-size:1.4rem}
   .build-grid{grid-template-columns:1fr}
-  .del-card{grid-template-columns:32px 1fr;gap:.65rem}
-  .del-icon{width:30px;height:30px;font-size:.65rem}
+  .del-entry{grid-template-columns:34px 1fr;gap:.7rem}.del-icon{width:34px;height:34px;font-size:.62rem}
   .f-row{grid-template-columns:1fr}
-  .bg-portrait{width:90vw;right:-22%;opacity:.15}
 }
-@media(max-width:400px){.hero-hl{font-size:1.75rem}}
+@media(max-width:400px){.hero-hl{font-size:1.8rem}}
 </style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8B51ZLDW8M"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8B51ZLDW8M');</script>
 </head>
 <body>
 <div class="bg-layer"></div>
-<div class="bg-portrait"></div>
-
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="closeMob()" aria-label="Close">&times;</button>
+  <a href="#about" onclick="closeMob()" data-i18n="n_about">Rólam</a>
+  <a href="#building" onclick="closeMob()" data-i18n="n_build">Projektek</a>
+  <a href="#delivered" onclick="closeMob()" data-i18n="n_del">Portfólió</a>
+  <a href="./links.html" data-i18n="n_links">Linkek</a>
+  <a href="#contact" onclick="closeMob()" data-i18n="n_con">Kapcsolat</a>
+</div>
 <div id="page">
-
 <nav>
-  <div class="nav-top">
-    <a href="/" class="nav-logo">TK</a>
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="#about" data-i18n="n_about">Rólam</a></li>
-        <li><a href="#building" data-i18n="n_build">Projektek</a></li>
-        <li><a href="#delivered" data-i18n="n_del">Portfólió</a></li>
-        <li><a href="./links.html" data-i18n="n_links">Linkek</a></li>
-        <li><a href="#contact" data-i18n="n_con">Kapcsolat</a></li>
-      </ul>
-      <div class="lang-sw">
-        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-        <span class="lang-sep">/</span>
-        <button class="lang-btn active" data-lang="hu" aria-pressed="true">HU</button>
-      </div>
-      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
-    </div>
+  <div class="nav-row1">
+    <a href="/" class="nav-logo">TK</a>
+    <ul class="nav-center">
+      <li><a href="#about" data-i18n="n_about">Rólam</a></li>
+      <li><a href="#building" data-i18n="n_build">Projektek</a></li>
+      <li><a href="#delivered" data-i18n="n_del">Portfólió</a></li>
+      <li><a href="#contact" data-i18n="n_con">Kapcsolat</a></li>
+    </ul>
+    <div class="nav-right-area">
+      <a href="./links.html" class="nav-links-btn" data-i18n="n_links">Linkek</a>
+      <div class="lang-sw">
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn active" data-lang="hu" aria-pressed="true">HU</button>
+      </div>
+      <button class="nav-toggle" onclick="openMob()" aria-label="Menu"><svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
   </div>
-  <div class="nav-socials">
-    <a href="https://www.facebook.com/profile.php?id=61560269362449" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-    <a href="https://www.instagram.com/officialkovacstamas" target="_blank" rel="noopener" class="nav-soc" title="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="rgba(255,255,255,.88)" stroke="none"/></svg></a>
-    <a href="https://www.tiktok.com/@officialkovacstamas" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.71a8.21 8.21 0 004.76 1.52V6.78a4.84 4.84 0 01-1-.09z"/></svg></a>
-    <a href="https://www.youtube.com/@officialkovacstamas" target="_blank" rel="noopener" class="nav-soc" title="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="rgba(255,255,255,.88)" stroke="none"/></svg></a>
-    <a href="https://x.com/kvcstms11" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-    <a href="https://www.linkedin.com/in/kvcstms" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
-    <a href="https://t.me/+Mk5bfbCfUf1lMGE0" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="Telegram"><svg viewBox="0 0 24 24"><path d="M22.05 1.577c-.393-.016-.784.08-1.117.235-2.127.952-17.794 7.482-19.632 8.28-.585.26-1.148.585-1.246 1.068-.1.5.372.89.812 1.09l4.6 1.862c.16.065.334.073.5.024l.004-.001 13.06-8.204c.25-.155.46.12.24.3L9.1 14.47l-.264 3.9c.037.553.396.846.728.846.239 0 .478-.127.678-.325l2.006-1.932 4.14 3.058c.56.413 1.3.19 1.496-.38l3.714-17.636c.2-.945-.335-1.603-1.11-1.6-.04 0-.08 0-.12.002l-.318.174z"/></svg></a>
-  </div>
+  <div class="nav-row2"><div class="nav-socials">
+    <a href="https://www.facebook.com/profile.php?id=61560269362449" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/officialkovacstamas" target="_blank" rel="noopener" class="nav-soc" title="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="rgba(255,255,255,.82)" stroke="none"/></svg></a>
+    <a href="https://www.tiktok.com/@officialkovacstamas" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.71a8.21 8.21 0 004.76 1.52V6.78a4.84 4.84 0 01-1-.09z"/></svg></a>
+    <a href="https://www.youtube.com/@officialkovacstamas" target="_blank" rel="noopener" class="nav-soc" title="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="rgba(255,255,255,.82)" stroke="none"/></svg></a>
+    <a href="https://x.com/kvcstms11" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.linkedin.com/in/kvcstms" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
+    <a href="https://t.me/+Mk5bfbCfUf1lMGE0",
+        "https://www.threads.com/@tamaskovacsofficial" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="Telegram"><svg viewBox="0 0 24 24"><path d="M22.05 1.577c-.393-.016-.784.08-1.117.235-2.127.952-17.794 7.482-19.632 8.28-.585.26-1.148.585-1.246 1.068-.1.5.372.89.812 1.09l4.6 1.862c.16.065.334.073.5.024l.004-.001 13.06-8.204c.25-.155.46.12.24.3L9.1 14.47l-.264 3.9c.037.553.396.846.728.846.239 0 .478-.127.678-.325l2.006-1.932 4.14 3.058c.56.413 1.3.19 1.496-.38l3.714-17.636c.2-.945-.335-1.603-1.11-1.6-.04 0-.08 0-.12.002l-.318.174z"/></svg></a>
+  </div></div>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" onclick="toggleMenu()" aria-label="Close">&#10005;</button>
-  <a href="#about" onclick="toggleMenu()" data-i18n="n_about">Rólam</a>
-  <a href="#building" onclick="toggleMenu()" data-i18n="n_build">Projektek</a>
-  <a href="#delivered" onclick="toggleMenu()" data-i18n="n_del">Portfólió</a>
-  <a href="./links.html" data-i18n="n_links">Linkek</a>
-  <a href="#contact" onclick="toggleMenu()" data-i18n="n_con">Kapcsolat</a>
+
+
+<section class="hero"><div class="container">
+  <div class="hero-inner">
+    <div class="hero-name">Tamás Kovács</div>
+    <h1 class="hero-hl">CREATE<i class="dot"></i>BUILD<i class="dot"></i>REACH</h1>
+    <div class="hero-sub" data-i18n="h_sub">Termék · Növekedés · Elosztás</div>
+    <p class="hero-desc" data-i18n="h_desc">Digitális termékeket építek és piacra viszek — stratégiától a launchig. Product, growth és distribution metszéspontján dolgozom.</p>
+    <div class="hero-stats">
+      <div><span class="hs-n">50K+</span><div class="hs-l" data-i18n="s_fol">követő</div></div>
+      <div><span class="hs-n">5</span><div class="hs-l" data-i18n="s_ship">szállított termék</div></div>
+      <div><span class="hs-n">10+</span><div class="hs-l" data-i18n="s_yr">év a technológiában</div></div>
+    </div>
+  </div>
+</div></section>
+
+
+
+<section id="about"><div class="container"><div class="about-inner fi">
+  <div class="s-label" data-i18n="ab_label">Rólam</div>
+  <h2 data-i18n="ab_title">Mérnökből terméképítő &amp; tartalomkészítő</h2>
+  <p data-i18n="ab_p1">Telekommunikációs mérnökként indultam — részt vettem 4G hálózati megoldások fejlesztésében (segélyhívó rendszerek, NB-IoT). Később termékmenedzserként IoT smart parkingtól 5G magánhálózatokig, kiberbiztonsági portfóliókig szállítottam piacra termékeket.</p>
+  <p data-i18n="ab_p2">Ma saját termékeimet fejlesztem és tartalmat készítek. Ausztriában élek, több témában készítek videókat és magyarázom el, az engem érdeklő témákat, mint pl: osztrák hírek, kripto/befektetés, gazdaság, technológia, sport és utazás. A célom érthetően és tömören átadni, ami számít.</p>
+  <div class="about-tags"><span>Product Manager</span><span>GTM Strategy</span><span>Launch</span><span>Content Creator</span><span>5G Enterprise</span><span>IoT</span><span>Automation</span><span>SAFe® POPM</span><span>n8n</span></div>
+</div></div></section>
+
+
+
+<section id="building"><div class="container">
+  <div class="s-label" data-i18n="b_label">Amin dolgozom</div>
+  <h2 class="s-title" data-i18n="b_title">Aktuális projektek</h2>
+  <div class="build-grid">
+    <div class="build-item fi"><div class="build-sep"></div>
+      <h3>📈 Piacradar</h3>
+      <span class="build-tag" data-i18n="bt_pr">Piaci briefek · Telegram</span>
+      <div class="desc" data-i18n="bd_pr">Napi piaci összefoglaló magyarul — makró, gyorsjelentések, kriptó. Megspórolok neked 20 percet minden reggel.</div>
+      <div class="build-actions"><a href="https://t.me/+Mk5bfbCfUf1lMGE0",
+        "https://www.threads.com/@tamaskovacsofficial" target="_blank" rel="noopener" class="btn-primary" data-i18n="cta_pr">Csatlakozz a Piacradarhoz Telegramon →</a></div>
+    </div>
+    <div class="build-item fi"><div class="build-sep"></div>
+      <h3><svg width="20" height="14" viewBox="0 0 20 14" style="vertical-align:middle;margin-right:4px;border-radius:2px"><rect width="20" height="14" fill="#fff"/><rect width="20" height="4.67" fill="#ED2939"/><rect y="9.33" width="20" height="4.67" fill="#ED2939"/></svg> Ausztria Radar</h3>
+      <span class="build-tag" data-i18n="bt_ar">Osztrák élet magyarul · Hírlevél</span>
+      <div class="desc" data-i18n="bd_ar">Osztrák hírek, adózás, egészségügy — magyarul, naponta. Az ausztriai magyaroknak szól.</div>
+      <div class="build-actions"><a href="https://ausztriaradar.hu/" target="_blank" rel="noopener" class="btn-primary" data-i18n="cta_ar">Iratkozz fel a hírlevélre →</a></div>
+    </div>
+  </div>
+</div></section>
+
+
+
+<section id="delivered"><div class="container">
+  <div class="s-label" data-i18n="d_label">Portfólió</div>
+  <h2 class="s-title" data-i18n="d_title">Amit szállítottam</h2>
+  <div class="del-list">
+    <div class="del-entry fi"><div class="del-icon">5G</div><div>
+      <div class="del-head"><h4 data-i18n="d_d5g_t">5G Private Network portfólió &amp; GTM — Drei Austria</h4><span class="del-outcome" data-i18n="d_d5g_o">Ausztria első kereskedelmi 5G MPN</span></div>
+      <div class="del-year">2022–2024</div>
+      <div class="del-desc" data-i18n="d_d5g_d">Teljes go-to-market stratégia: vendor kiválasztás, folyamattervezés, dokumentáció és kereskedelmi indulás.</div>
+    </div></div>
+    <div class="del-entry fi"><div class="del-icon">🛡</div><div>
+      <div class="del-head"><h4 data-i18n="d_cy_t">Gyermekvédelmi app — Cyan Security</h4><span class="del-outcome" data-i18n="d_cy_o">MVP validálva, több ezer felhasználó</span></div>
+      <div class="del-year">2021</div>
+      <div class="del-desc" data-i18n="d_cy_d">UI/UX fejlesztés, click-dummy validáció és felhasználói tesztelés. Digitális biztonsági termék családoknak.</div>
+    </div></div>
+    <div class="del-entry fi"><div class="del-icon">5G</div><div>
+      <div class="del-head"><h4 data-i18n="d_v5g_t">5G ipari magánhálózat — Vodafone Hungary</h4><span class="del-outcome" data-i18n="d_v5g_o">Első ipari 5G MPN Magyarországon</span></div>
+      <div class="del-year">2019–2020</div>
+      <div class="del-desc" data-i18n="d_v5g_d">Ipari use case fejlesztés és Magyarország első B2B 5G magánhálózatának szállítása.</div>
+    </div></div>
+    <div class="del-entry fi"><div class="del-icon">P</div><div>
+      <div class="del-head"><h4 data-i18n="d_sp_t">Smart Parking — Vodafone Hungary</h4><span class="del-outcome" data-i18n="d_sp_o">100K+ letöltés, első a piacon</span></div>
+      <div class="del-year">2018–2019</div>
+      <div class="del-desc" data-i18n="d_sp_d">Teljes IoT termék: szenzorok, backend, API-k, mobilapp és dashboard. Magyarország első okos parkolási megoldása.</div>
+    </div></div>
+    <div class="del-entry fi"><div class="del-icon">4G</div><div>
+      <div class="del-head"><h4 data-i18n="d_tel_t">4G Core és segélyhívó rendszer — Telenor Hungary</h4><span class="del-outcome" data-i18n="d_tel_o">eCall, 112, VoLTE</span></div>
+      <div class="del-year">2016</div>
+      <div class="del-desc" data-i18n="d_tel_d">Segélyhívó hívásfolyamatok tervezése (eCall, 112) és VoLTE core network tesztelés.</div>
+    </div></div>
+  </div>
+</div></section>
+
+
+
+<section id="contact"><div class="container"><div class="c-form-wrap fi">
+  <div class="s-label" data-i18n="co_label">Kapcsolat</div>
+  <h2 class="s-title" data-i18n="co_title">Dolgozzunk együtt</h2>
+  <p class="s-sub" data-i18n="co_sub">Partnerség, szponzoráció, tartalmi együttműködés, tanácsadás.</p>
+  <form class="c-form" id="contactForm" action="https://formsubmit.co/tamas11kovacs@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="tamaskovacs.eu"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
+    <div class="f-row">
+      <div class="fg"><label for="name" data-i18n="f_n">Név</label><input type="text" id="name" name="name" required data-i18n-ph="fp_n" placeholder="A neved"></div>
+      <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="te@email.com" required></div>
+    </div>
+    <div class="fg"><label for="type" data-i18n="f_t">Téma</label><select id="type" name="type"><option value="partnership" data-i18n="o1">Partnerség / Szponzoráció</option><option value="collab" data-i18n="o2">Tartalmi együttműködés</option><option value="consulting" data-i18n="o3">Tanácsadás</option><option value="other" data-i18n="o4">Egyéb</option></select></div>
+    <div class="fg"><label for="message" data-i18n="f_m">Üzenet</label><textarea id="message" name="message" required data-i18n-ph="fp_m" placeholder="Írd le az ötleted..."></textarea></div>
+    <button type="submit" class="btn-sub" data-i18n="f_s">Küldés →</button>
+    <p class="f-privacy" data-i18n-html="f_priv">Az itt megadott adatok kizárólag a megkeresés megválaszolására kerülnek felhasználásra. Részletek az <a href="./privacy.html">Adatkezelési tájékoztatóban</a>.</p>
+    <div class="form-msg" id="formMsg"></div>
+  </form>
+</div></div></section>
+
+
+
+<footer><div class="container"><p>© 2026 Tamás Kovács | <span data-i18n="ft">Készült Ausztriában</span></p></div></footer>
 </div>
 
-<section class="hero">
-  <div class="container">
-    <div class="hero-left">
-      <div class="hero-name">Tamás Kovács</div>
-      <h1 class="hero-hl">CREATE<i class="sep"></i>BUILD<i class="sep"></i>REACH</h1>
-      <div class="hero-sub" data-i18n="h_sub">Termék · Tartalom · Elérés</div>
-      <p class="hero-desc" data-i18n="h_desc">Termékeket építek és piacokat magyarázok. A Piacradar és az Ausztria Radar napi összefoglalókat ad a piacokról és az ausztriai életről — magyarul.</p>
-      <div class="hero-stats">
-        <div><span class="hs-n">45K+</span><div class="hs-l" data-i18n="s_fol">követő</div></div>
-        <div><span class="hs-n">5</span><div class="hs-l" data-i18n="s_ship">szállított termék</div></div>
-        <div><span class="hs-n">10+</span><div class="hs-l" data-i18n="s_yr">év a technológiában</div></div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<hr class="section-line">
-
-<section id="about">
-  <div class="container">
-    <div class="about-wrap fi">
-      <div class="s-label" data-i18n="ab_label">Rólam</div>
-      <h2 data-i18n="ab_title">Mérnökből terméképítő és tartalomkészítő</h2>
-      <p data-i18n="ab_p1">A karrieremet telekommunikációs mérnökként kezdtem — 4G hálózatokat és segélyhívó rendszereket építettem. Később termékmenedzser lettem: IoT smart parkingtól 5G magánhálózatokon át kiberbiztonsági portfólióig szállítottam piacra termékeket.</p>
-      <p data-i18n="ab_p2">Ma a saját termékeimet fejlesztem és tartalmat gyártok. Ausztriában élek, és többféle témában készítek videókat és összefoglalókat: osztrák hírek és hétköznapok, kriptó és befektetés, gazdasági ismeretterjesztés, tech, sport, utazás. A célom, hogy érthetően és tömören adjam át, ami számít.</p>
-      <div class="about-tags"><span>Product Manager</span><span>Content Creator</span><span>Automation</span><span>5G · IoT</span><span>SAFe® POPM</span><span>n8n</span></div>
-    </div>
-  </div>
-</section>
-
-<hr class="section-line">
-
-<section id="building">
-  <div class="container">
-    <div class="s-label" data-i18n="b_label">Amin dolgozom</div>
-    <h2 class="s-title" data-i18n="b_title">Aktuális projektek</h2>
-    <div class="build-grid">
-      <div class="build-card fi">
-        <h3>&#x1F4C8; Piacradar</h3>
-        <span class="build-tag" data-i18n="bt_pr">Piaci összefoglalók · Telegram</span>
-        <div class="desc" data-i18n="bd_pr">Napi piaci összefoglaló magyarul — makró, gyorsjelentések, kriptó. Megspórolok neked 20 percet minden reggel.</div>
-        <div class="build-actions">
-          <a href="https://t.me/+Mk5bfbCfUf1lMGE0" target="_blank" rel="noopener" class="btn-primary" data-i18n="cta_pr">Csatlakozz a Piacradarhoz Telegramon →</a>
-        </div>
-      </div>
-      <div class="build-card fi">
-        <h3>&#x1F1E6;&#x1F1F9; Ausztria Radar</h3>
-        <span class="build-tag" data-i18n="bt_ar">Osztrák élet magyarul · Hírlevél</span>
-        <div class="desc" data-i18n="bd_ar">Osztrák hírek, adózás, egészségügy — magyarul, naponta. Az ausztriai magyaroknak szól.</div>
-        <div class="build-actions">
-          <a href="https://preview.mailerlite.io/forms/122717218075691469/8716491/share" target="_blank" rel="noopener" class="btn-primary" data-i18n="cta_ar">Iratkozz fel a hírlevélre →</a>
-        </div>
-      </div>
-    </div>
-    <div class="links-row fi">
-      <a href="./links.html" class="btn-ghost" data-i18n="links_btn">Linkek →</a>
-    </div>
-  </div>
-</section>
-
-<hr class="section-line">
-
-<section id="delivered">
-  <div class="container">
-    <div class="s-label" data-i18n="d_label">Portfólió</div>
-    <h2 class="s-title" data-i18n="d_title">Amit szállítottam</h2>
-    <div class="del-grid">
-      <div class="del-card fi">
-        <div class="del-icon">5G</div>
-        <div>
-          <div class="del-top"><h4 data-i18n="d_d5g_t">5G Private Network portfólió — Drei Austria</h4><span class="del-outcome" data-i18n="d_d5g_o">Ausztria első kereskedelmi 5G MPN</span></div>
-          <div class="del-meta">2022–2024</div>
-          <div class="del-desc" data-i18n="d_d5g_d">Teljes go-to-market stratégia: vendor kiválasztás, folyamattervezés, dokumentáció és kereskedelmi indulás.</div>
-          <div class="del-pills"><span>5G</span><span>GTM</span><span>B2B</span></div>
-        </div>
-      </div>
-      <div class="del-card fi">
-        <div class="del-icon">&#x1F6E1;</div>
-        <div>
-          <div class="del-top"><h4 data-i18n="d_cy_t">Gyermekvédelmi alkalmazás — Cyan Security</h4><span class="del-outcome" data-i18n="d_cy_o">MVP validálva, több ezer felhasználó</span></div>
-          <div class="del-meta">2021</div>
-          <div class="del-desc" data-i18n="d_cy_d">UI/UX fejlesztés, click-dummy validáció és felhasználói tesztelés. Digitális biztonsági termék családoknak.</div>
-          <div class="del-pills"><span>UX</span><span>MVP</span><span>Mobile</span></div>
-        </div>
-      </div>
-      <div class="del-card fi">
-        <div class="del-icon">5G</div>
-        <div>
-          <div class="del-top"><h4 data-i18n="d_v5g_t">5G ipari magánhálózat — Vodafone Hungary</h4><span class="del-outcome" data-i18n="d_v5g_o">Első ipari 5G MPN Magyarországon</span></div>
-          <div class="del-meta">2019–2020</div>
-          <div class="del-desc" data-i18n="d_v5g_d">Ipari use case fejlesztés és Magyarország első B2B 5G magánhálózatának szállítása.</div>
-          <div class="del-pills"><span>5G</span><span>B2B</span><span>Enterprise</span></div>
-        </div>
-      </div>
-      <div class="del-more" id="delMore">
-        <div class="del-card fi" style="margin-bottom:.6rem">
-          <div class="del-icon">P</div>
-          <div>
-            <div class="del-top"><h4 data-i18n="d_sp_t">Smart Parking — Vodafone Hungary</h4><span class="del-outcome" data-i18n="d_sp_o">100K+ letöltés, első a piacon</span></div>
-            <div class="del-meta">2019–2020</div>
-            <div class="del-desc" data-i18n="d_sp_d">Teljes IoT termék: szenzorok, backend, API-k, mobilapp és dashboard. Magyarország első okos parkolási megoldása.</div>
-            <div class="del-pills"><span>IoT</span><span>Mobile</span><span>Launch</span></div>
-          </div>
-        </div>
-        <div class="del-card fi">
-          <div class="del-icon">4G</div>
-          <div>
-            <div class="del-top"><h4 data-i18n="d_tel_t">4G Core és segélyhívó rendszer — Telenor Hungary</h4><span class="del-outcome" data-i18n="d_tel_o">eCall, 112, VoLTE</span></div>
-            <div class="del-meta">2016</div>
-            <div class="del-desc" data-i18n="d_tel_d">Segélyhívó hívásfolyamatok tervezése (eCall, 112) és VoLTE core network tesztelés.</div>
-            <div class="del-pills"><span>4G</span><span>VoLTE</span><span>eCall</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="del-toggle" id="delToggle" onclick="toggleDel()"><span data-i18n="d_more">Mutass többet</span> <span class="arr">↓</span></button>
-  </div>
-</section>
-
-<hr class="section-line">
-
-<section id="contact">
-  <div class="container">
-    <div class="c-form-wrap fi">
-      <div class="s-label" data-i18n="co_label">Kapcsolat</div>
-      <h2 class="s-title" data-i18n="co_title">Dolgozzunk együtt</h2>
-      <p class="s-sub" data-i18n="co_sub">Partnerség, szponzoráció, tartalmi együttműködés, tanácsadás.</p>
-      <form class="c-form" action="https://formsubmit.co/tamas11kovacs@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="tamaskovacs.eu"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
-        <div class="f-row">
-          <div class="fg"><label for="name" data-i18n="f_n">Név</label><input type="text" id="name" name="name" required data-i18n-ph="fp_n" placeholder="A neved"></div>
-          <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="te@email.com" required></div>
-        </div>
-        <div class="fg"><label for="type" data-i18n="f_t">Téma</label><select id="type" name="type"><option value="partnership" data-i18n="o1">Partnerség / Szponzoráció</option><option value="collab" data-i18n="o2">Tartalmi együttműködés</option><option value="consulting" data-i18n="o3">Tanácsadás</option><option value="other" data-i18n="o4">Egyéb</option></select></div>
-        <div class="fg"><label for="message" data-i18n="f_m">Üzenet</label><textarea id="message" name="message" required data-i18n-ph="fp_m" placeholder="Írd le az ötleted..."></textarea></div>
-        <button type="submit" class="btn-sub" data-i18n="f_s">Küldés →</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<footer><div class="container"><p>© 2026 Tamás Kovács · <span data-i18n="ft">Készült Ausztriában</span></p></div></footer>
-
-</div>
 
 <script>
-const CONFIG={
-  piacradar_tg:'https://t.me/+Mk5bfbCfUf1lMGE0',
-  ausztriaradar_nl:'https://preview.mailerlite.io/forms/122717218075691469/8716491/share',
-  formAction:'https://formsubmit.co/tamas11kovacs@gmail.com',
-};
-
-const T={hu:{
-  n_about:"Rólam",n_build:"Projektek",n_del:"Portfólió",n_links:"Linkek",n_con:"Kapcsolat",
-  h_sub:"Termék · Tartalom · Elérés",
-  h_desc:"Termékeket építek és piacokat magyarázok. A Piacradar és az Ausztria Radar napi összefoglalókat ad a piacokról és az ausztriai életről — magyarul.",
-  s_fol:"követő",s_ship:"szállított termék",s_yr:"év a technológiában",
-  ab_label:"Rólam",ab_title:"Mérnökből terméképítő és tartalomkészítő",
-  ab_p1:"A karrieremet telekommunikációs mérnökként kezdtem — 4G hálózatokat és segélyhívó rendszereket építettem. Később termékmenedzser lettem: IoT smart parkingtól 5G magánhálózatokon át kiberbiztonsági portfólióig szállítottam piacra termékeket.",
-  ab_p2:"Ma a saját termékeimet fejlesztem és tartalmat gyártok. Ausztriában élek, és többféle témában készítek videókat és összefoglalókat: osztrák hírek és hétköznapok, kriptó és befektetés, gazdasági ismeretterjesztés, tech, sport, utazás. A célom, hogy érthetően és tömören adjam át, ami számít.",
-  b_label:"Amin dolgozom",b_title:"Aktuális projektek",
-  bt_pr:"Piaci összefoglalók · Telegram",bd_pr:"Napi piaci összefoglaló magyarul — makró, gyorsjelentések, kriptó. Megspórolok neked 20 percet minden reggel.",
-  bt_ar:"Osztrák élet magyarul · Hírlevél",bd_ar:"Osztrák hírek, adózás, egészségügy — magyarul, naponta. Az ausztriai magyaroknak szól.",
-  cta_pr:"Csatlakozz a Piacradarhoz Telegramon →",cta_ar:"Iratkozz fel a hírlevélre →",
-  links_btn:"Linkek →",
-  d_label:"Portfólió",d_title:"Amit szállítottam",
-  d_d5g_t:"5G Private Network portfólió — Drei Austria",d_d5g_o:"Ausztria első kereskedelmi 5G MPN",d_d5g_d:"Teljes go-to-market stratégia: vendor kiválasztás, folyamattervezés, dokumentáció és kereskedelmi indulás.",
-  d_cy_t:"Gyermekvédelmi alkalmazás — Cyan Security",d_cy_o:"MVP validálva, több ezer felhasználó",d_cy_d:"UI/UX fejlesztés, click-dummy validáció és felhasználói tesztelés. Digitális biztonsági termék családoknak.",
-  d_v5g_t:"5G ipari magánhálózat — Vodafone Hungary",d_v5g_o:"Első ipari 5G MPN Magyarországon",d_v5g_d:"Ipari use case fejlesztés és Magyarország első B2B 5G magánhálózatának szállítása.",
-  d_sp_t:"Smart Parking — Vodafone Hungary",d_sp_o:"100K+ letöltés, első a piacon",d_sp_d:"Teljes IoT termék: szenzorok, backend, API-k, mobilapp és dashboard. Magyarország első okos parkolási megoldása.",
-  d_tel_t:"4G Core és segélyhívó rendszer — Telenor Hungary",d_tel_o:"eCall, 112, VoLTE",d_tel_d:"Segélyhívó hívásfolyamatok tervezése (eCall, 112) és VoLTE core network tesztelés.",
-  d_more:"Mutass többet",d_less:"Kevesebb",
-  co_label:"Kapcsolat",co_title:"Dolgozzunk együtt",co_sub:"Partnerség, szponzoráció, tartalmi együttműködés, tanácsadás.",
-  f_n:"Név",f_t:"Téma",f_m:"Üzenet",f_s:"Küldés →",
-  o1:"Partnerség / Szponzoráció",o2:"Tartalmi együttműködés",o3:"Tanácsadás",o4:"Egyéb",
-  fp_n:"A neved",fp_m:"Írd le az ötleted...",ft:"Készült Ausztriában"
-},en:{
-  n_about:"About",n_build:"Projects",n_del:"Portfolio",n_links:"Links",n_con:"Contact",
-  h_sub:"Product · Content · Distribution",
-  h_desc:"I build products and explain markets. Piacradar and Ausztria Radar deliver daily briefs about markets and life in Austria — in Hungarian.",
-  s_fol:"followers",s_ship:"shipped products",s_yr:"years in technology",
-  ab_label:"About",ab_title:"From Engineer to Product Builder & Creator",
-  ab_p1:"I started my career as a telecom engineer — building 4G networks and emergency call systems. Later I moved into product management, shipping everything from IoT smart parking to 5G private networks and cybersecurity portfolios.",
-  ab_p2:"Today I build my own products and create content. I live in Austria and cover a range of topics: Austrian news and daily life, crypto and investing, economics, tech, sports, and travel. My goal is to deliver what matters — clearly and concisely.",
-  b_label:"What I'm building",b_title:"Current projects",
-  bt_pr:"Market briefings · Telegram",bd_pr:"Daily market brief in Hungarian — macro, earnings, crypto. Saves you 20 minutes every morning.",
-  bt_ar:"Austria in Hungarian · Newsletter",bd_ar:"Austrian news, taxes, healthcare — in Hungarian, daily. Made for Hungarians living in Austria.",
-  cta_pr:"Join Piacradar on Telegram →",cta_ar:"Subscribe to newsletter →",
-  links_btn:"Links →",
-  d_label:"Portfolio",d_title:"What I've Shipped",
-  d_d5g_t:"5G Private Network Portfolio — Drei Austria",d_d5g_o:"Austria's first commercial 5G MPN",d_d5g_d:"Full go-to-market strategy: vendor selection, process design, documentation, and commercial launch.",
-  d_cy_t:"Child Protection App — Cyan Security",d_cy_o:"MVP validated, thousands of users",d_cy_d:"UI/UX development, click-dummy validation, and user testing. Digital safety product for families.",
-  d_v5g_t:"5G Industrial Private Network — Vodafone Hungary",d_v5g_o:"First industrial 5G MPN in Hungary",d_v5g_d:"Enterprise use case development and delivery of Hungary's first B2B 5G private network.",
-  d_sp_t:"Smart Parking — Vodafone Hungary",d_sp_o:"100K+ downloads, first-to-market",d_sp_d:"Full IoT product: sensors, backend, APIs, mobile app, dashboard. Hungary's first smart parking solution.",
-  d_tel_t:"4G Core & Emergency Call System — Telenor Hungary",d_tel_o:"eCall, 112, VoLTE",d_tel_d:"Designed emergency call flows (eCall, 112) and tested VoLTE core network infrastructure.",
-  d_more:"Show more",d_less:"Show less",
-  co_label:"Contact",co_title:"Let's Work Together",co_sub:"Partnerships, sponsorships, content collaborations, consulting.",
-  f_n:"Name",f_t:"Topic",f_m:"Message",f_s:"Send →",
-  o1:"Partnership / Sponsorship",o2:"Content Collaboration",o3:"Consulting",o4:"Other",
-  fp_n:"Your name",fp_m:"Tell me your idea...",ft:"Built in Austria"
-}};
-
-let lang=localStorage.getItem('tk_lang')||'hu';
-function setLang(l){
-  lang=l;localStorage.setItem('tk_lang',l);
-  document.documentElement.lang=l;
-  const t=T[l];
-  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(t[k]!=null)el.textContent=t[k];});
-  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.getAttribute('data-i18n-ph');if(t[k]!=null)el.placeholder=t[k];});
-  document.querySelectorAll('.lang-btn').forEach(b=>{const a=b.dataset.lang===l;b.classList.toggle('active',a);b.setAttribute('aria-pressed',a);});
-  document.querySelectorAll('.mobile-menu [data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(t[k]!=null)el.textContent=t[k];});
-}
-document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+var T={hu:{n_about:"Rólam",n_build:"Projektek",n_del:"Portfólió",n_links:"Linkek",n_con:"Kapcsolat",h_sub:"Termék · Növekedés · Elosztás",h_desc:"Digitális termékeket építek és piacra viszek \u2014 stratégiától a launchig. Product, growth és distribution metszéspontján dolgozom.",s_fol:"követő",s_ship:"szállított termék",s_yr:"év a technológiában",ab_label:"Rólam",ab_title:"Mérnökből terméképítő & tartalomkészítő",ab_p1:"Telekommunikációs mérnökként indultam \u2014 részt vettem 4G hálózati megoldások fejlesztésében (segélyhívó rendszerek, NB-IoT). Később termékmenedzserként IoT smart parkingtól 5G magánhálózatokig, kiberbiztonsági portfóliókig szállítottam piacra termékeket.",ab_p2:"Ma saját termékeimet fejlesztem és tartalmat készítek. Ausztriában élek, több témában készítek videókat és magyarázom el, az engem érdeklő témákat, mint pl: osztrák hírek, kripto/befektetés, gazdaság, technológia, sport és utazás. A célom érthetően és tömören átadni, ami számít.",b_label:"Amin dolgozom",b_title:"Aktuális projektek",bt_pr:"Piaci briefek · Telegram",bd_pr:"Napi piaci összefoglaló magyarul \u2014 makró, gyorsjelentések, kriptó. Megspórolok neked 20 percet minden reggel.",bt_ar:"Osztrák élet magyarul · Hírlevél",bd_ar:"Osztrák hírek, adózás, egészségügy \u2014 magyarul, naponta. Az ausztriai magyaroknak szól.",cta_pr:"Csatlakozz a Piacradarhoz Telegramon \u2192",cta_ar:"Iratkozz fel a hírlevélre \u2192",d_label:"Portfólió",d_title:"Amit szállítottam",d_d5g_t:"5G Private Network portfólió & GTM \u2014 Drei Austria",d_d5g_o:"Ausztria első kereskedelmi 5G MPN",d_d5g_d:"Teljes go-to-market stratégia: vendor kiválasztás, folyamattervezés, dokumentáció és kereskedelmi indulás.",d_cy_t:"Gyermekvédelmi app \u2014 Cyan Security",d_cy_o:"MVP validálva, több ezer felhasználó",d_cy_d:"UI/UX fejlesztés, click-dummy validáció és felhasználói tesztelés. Digitális biztonsági termék családoknak.",d_v5g_t:"5G ipari magánhálózat \u2014 Vodafone Hungary",d_v5g_o:"Első ipari 5G MPN Magyarországon",d_v5g_d:"Ipari use case fejlesztés és Magyarország első B2B 5G magánhálózatának szállítása.",d_sp_t:"Smart Parking \u2014 Vodafone Hungary",d_sp_o:"100K+ letöltés, első a piacon",d_sp_d:"Teljes IoT termék: szenzorok, backend, API-k, mobilapp és dashboard. Magyarország első okos parkolási megoldása.",d_tel_t:"4G Core és segélyhívó rendszer \u2014 Telenor Hungary",d_tel_o:"eCall, 112, VoLTE",d_tel_d:"Segélyhívó hívásfolyamatok tervezése (eCall, 112) és VoLTE core network tesztelés.",co_label:"Kapcsolat",co_title:"Dolgozzunk együtt",co_sub:"Partnerség, szponzoráció, tartalmi együttműködés, tanácsadás.",f_n:"Név",f_t:"Téma",f_m:"Üzenet",f_s:"Küldés \u2192",o1:"Partnerség / Szponzoráció",o2:"Tartalmi együttműködés",o3:"Tanácsadás",o4:"Egyéb",fp_n:"A neved",fp_m:"Írd le az ötleted...",ft:"Készült Ausztriában",f_priv:"Az itt megadott adatok kizárólag a megkeresés megválaszolására kerülnek felhasználásra. Részletek az <a href='./privacy.html'>Adatkezelési tájékoztatóban</a>.",form_ok:"Köszönöm! Hamarosan válaszolok.",form_err:"Hiba történt. Próbáld újra."},en:{n_about:"About",n_build:"Projects",n_del:"Portfolio",n_links:"Links",n_con:"Contact",h_sub:"Product · Growth · Distribution",h_desc:"I build and ship digital products \u2014 from strategy to launch. I work across product, growth, and distribution.",s_fol:"followers",s_ship:"shipped products",s_yr:"years in technology",ab_label:"About",ab_title:"From Engineer to Product Builder & Creator",ab_p1:"I started as a telecom engineer \u2014 working on 4G network solutions including emergency call systems and NB-IoT. Later I moved into product management, shipping everything from IoT smart parking to 5G private networks and cybersecurity portfolios.",ab_p2:"Today I build my own products and create content. I live in Austria and cover a range of topics: Austrian news, crypto and investing, economics, tech, sports, and travel. My goal is to deliver what matters \u2014 clearly and concisely.",b_label:"What I'm building",b_title:"Current projects",bt_pr:"Market briefings · Telegram",bd_pr:"Daily market brief in Hungarian \u2014 macro, earnings, crypto. Saves you 20 minutes every morning.",bt_ar:"Austria in Hungarian · Newsletter",bd_ar:"Austrian news, taxes, healthcare \u2014 in Hungarian, daily. Made for Hungarians living in Austria.",cta_pr:"Join Piacradar on Telegram \u2192",cta_ar:"Subscribe to newsletter \u2192",d_label:"Portfolio",d_title:"What I've Shipped",d_d5g_t:"5G Private Network Portfolio & GTM \u2014 Drei Austria",d_d5g_o:"Austria's first commercial 5G MPN",d_d5g_d:"Full go-to-market strategy: vendor selection, process design, documentation, and commercial launch.",d_cy_t:"Child Protection App \u2014 Cyan Security",d_cy_o:"MVP validated, thousands of users",d_cy_d:"UI/UX development, click-dummy validation, and user testing. Digital safety product for families.",d_v5g_t:"5G Industrial Private Network \u2014 Vodafone Hungary",d_v5g_o:"First industrial 5G MPN in Hungary",d_v5g_d:"Enterprise use case development and delivery of Hungary's first B2B 5G private network.",d_sp_t:"Smart Parking \u2014 Vodafone Hungary",d_sp_o:"100K+ downloads, first-to-market",d_sp_d:"Full IoT product: sensors, backend, APIs, mobile app, dashboard. Hungary's first smart parking solution.",d_tel_t:"4G Core & Emergency Call System \u2014 Telenor Hungary",d_tel_o:"eCall, 112, VoLTE",d_tel_d:"Designed emergency call flows (eCall, 112) and tested VoLTE core network infrastructure.",co_label:"Contact",co_title:"Let's Work Together",co_sub:"Partnerships, sponsorships, content collaborations, consulting.",f_n:"Name",f_t:"Topic",f_m:"Message",f_s:"Send \u2192",o1:"Partnership / Sponsorship",o2:"Content Collaboration",o3:"Consulting",o4:"Other",fp_n:"Your name",fp_m:"Tell me your idea...",ft:"Built in Austria",f_priv:"The data submitted here is used solely to respond to your inquiry. Details in the <a href='./privacy.html'>Privacy Notice</a>.",form_ok:"Thanks! I'll get back to you soon.",form_err:"Something went wrong. Please try again."}};
+var lang=localStorage.getItem('tk_lang')||'en';
+function setLang(l){lang=l;localStorage.setItem('tk_lang',l);document.documentElement.lang=l;var t=T[l];document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(t[k]!=null)el.textContent=t[k];});document.querySelectorAll('[data-i18n-html]').forEach(function(el){var k=el.getAttribute('data-i18n-html');if(t[k]!=null)el.innerHTML=t[k];});document.querySelectorAll('[data-i18n-ph]').forEach(function(el){var k=el.getAttribute('data-i18n-ph');if(t[k]!=null)el.placeholder=t[k];});document.querySelectorAll('.lang-btn').forEach(function(b){var a=b.dataset.lang===l;b.classList.toggle('active',a);b.setAttribute('aria-pressed',a);});}
+document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
 setLang(lang);
-
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('v'),i*45);obs.unobserve(e.target);}});
-},{threshold:.08,rootMargin:'0px 0px -10px 0px'});
-document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
-
-function toggleDel(){
-  const m=document.getElementById('delMore'),b=document.getElementById('delToggle');
-  const open=m.classList.toggle('open');
-  b.classList.toggle('open',open);
-  const s=b.querySelector('[data-i18n]');
-  s.setAttribute('data-i18n',open?'d_less':'d_more');
-  s.textContent=T[lang][open?'d_less':'d_more'];
-  if(open)m.querySelectorAll('.fi:not(.v)').forEach(el=>obs.observe(el));
-}
-
-function toggleMenu(){
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e,i){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('v');},i*50);obs.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.fi').forEach(function(el){obs.observe(el);});
+function openMob(){document.getElementById('mobMenu').classList.add('open');document.body.style.overflow='hidden';}
+function closeMob(){document.getElementById('mobMenu').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();var form=this;var msg=document.getElementById('formMsg');var data=new FormData(form);fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){msg.className='form-msg ok';msg.textContent=T[lang].form_ok;form.reset();}else{msg.className='form-msg err';msg.textContent=T[lang].form_err;}}).catch(function(){msg.className='form-msg err';msg.textContent=T[lang].form_err;});});
 </script>
 </body>
 </html>
