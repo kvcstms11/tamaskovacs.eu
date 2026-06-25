@@ -10,10 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#08080A;--card:rgba(255,255,255,0.025);--card-h:rgba(255,255,255,0.055);
-  --border:rgba(255,255,255,0.07);--border-h:rgba(255,255,255,0.14);
-  --text:#F2F4F8;--text2:rgba(242,244,248,0.68);
-  --text3:rgba(242,244,248,0.40);--accent:#A78BFA;--accent-dim:rgba(167,139,250,0.08);
+  --bg:#0B0C10;--card:rgba(255,255,255,0.03);--card-h:rgba(255,255,255,0.06);
+  --border:rgba(255,255,255,0.08);--border-h:rgba(255,255,255,0.14);
+  --text:#F2F4F8;--text2:rgba(242,244,248,0.72);
+  --text3:rgba(242,244,248,0.45);--accent:#A78BFA;--accent-dim:rgba(167,139,250,0.1);
   --rs:8px;--font:'Inter',system-ui,-apple-system,sans-serif;--display:'Sora',system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -23,9 +23,9 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:
   background-size:72px 72px}
 .bg-portrait{position:fixed;top:-10%;right:-8%;width:50vw;max-width:500px;aspect-ratio:2/3;
   background:url('hero-photo.png') center 10%/cover no-repeat;
-  filter:blur(24px) grayscale(1) brightness(.28) contrast(.95);opacity:.32;
-  -webkit-mask-image:radial-gradient(ellipse at 70% 25%,rgba(0,0,0,.65) 0%,rgba(0,0,0,.25) 55%,transparent 72%);
-  mask-image:radial-gradient(ellipse at 70% 25%,rgba(0,0,0,.65) 0%,rgba(0,0,0,.25) 55%,transparent 72%);
+  filter:blur(28px) brightness(0.15) saturate(0.15);opacity:0.14;
+  -webkit-mask-image:linear-gradient(to left,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.2) 40%,transparent 65%);
+  mask-image:linear-gradient(to left,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.2) 40%,transparent 65%);
   z-index:0;pointer-events:none}
 .page{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;padding:2.5rem 1.25rem;max-width:420px;margin:0 auto;min-height:100vh}
 .lib-lang{position:fixed;top:.85rem;right:1rem;z-index:10;display:flex;align-items:center;gap:.08rem}
@@ -37,7 +37,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:
 .lib-name{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.2rem}
 .lib-desc{font-size:.8rem;color:var(--text2);text-align:center;margin-bottom:1.5rem;max-width:300px;line-height:1.45}
 .lib-links{display:flex;flex-direction:column;gap:.55rem;width:100%}
-.lib-btn{display:flex;align-items:center;gap:.7rem;padding:.8rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--rs);text-decoration:none;color:var(--text);transition:all .2s;width:100%}
+.lib-btn,.lib-btn:visited{display:flex;align-items:center;gap:.7rem;padding:.8rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--rs);text-decoration:none;color:var(--text);transition:all .2s;width:100%}
 .lib-btn:hover{background:var(--card-h);border-color:var(--border-h);transform:translateY(-1px)}
 .lib-btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .lib-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;background:var(--accent-dim);border:1px solid rgba(167,139,250,.1)}
@@ -46,7 +46,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:
 .lib-subdesc{font-size:.68rem;color:var(--text3);line-height:1.35}
 .lib-arrow{color:var(--text3);font-size:.7rem}
 .lib-footer{margin-top:1.75rem;font-size:.62rem;color:var(--text3)}
-.lib-footer a{color:var(--text2);text-decoration:none;transition:color .2s}
+.lib-footer a,.lib-footer a:visited{color:var(--text2);text-decoration:none;transition:color .2s}
 .lib-footer a:hover{color:var(--accent)}
 @media(max-width:400px){.page{padding:2rem 1rem}.lib-btn{padding:.7rem .85rem}}
 </style>
