@@ -6,111 +6,135 @@
 <title>Tamás Kovács — Linkek</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
+<link rel="icon" type="image/png" href="./favicon.png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#0B0C10;--card:rgba(255,255,255,0.03);--card-h:rgba(255,255,255,0.06);
-  --border:rgba(255,255,255,0.08);--border-h:rgba(255,255,255,0.14);
-  --text:#F2F4F8;--text2:rgba(242,244,248,0.72);
-  --text3:rgba(242,244,248,0.45);--accent:#A78BFA;--accent-dim:rgba(167,139,250,0.1);
-  --rs:8px;--font:'Inter',system-ui,-apple-system,sans-serif;--display:'Sora',system-ui,sans-serif;
-}
+:root{--bg:#08080A;--border:rgba(255,255,255,0.07);--text:#ECEEF3;--text2:rgba(236,238,243,0.68);--text3:rgba(236,238,243,0.38);--accent:#B49CFF;--accent-dim:rgba(180,156,255,0.08);--font:'DM Sans',system-ui,sans-serif;--display:'Sora',system-ui,sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
+html{background-color:#08080A}
 body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;min-height:100vh}
-.bg-layer{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:linear-gradient(rgba(255,255,255,0.005) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.005) 1px,transparent 1px);
-  background-size:72px 72px}
-.bg-portrait{position:fixed;top:-10%;right:-8%;width:50vw;max-width:500px;aspect-ratio:2/3;
-  background:url('hero-photo-2.jpg') center 10%/cover no-repeat;
-  filter:blur(28px) brightness(0.15) saturate(0.15);opacity:0.14;
-  -webkit-mask-image:linear-gradient(to left,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.2) 40%,transparent 65%);
-  mask-image:linear-gradient(to left,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.2) 40%,transparent 65%);
-  z-index:0;pointer-events:none}
-.page{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;padding:2.5rem 1.25rem;max-width:420px;margin:0 auto;min-height:100vh}
-.lib-lang{position:fixed;top:.85rem;right:1rem;z-index:10;display:flex;align-items:center;gap:.08rem}
-.lang-btn{background:none;border:none;padding:.18rem .3rem;color:var(--text3);cursor:pointer;font-family:var(--font);font-size:.68rem;font-weight:600;transition:color .2s;border-radius:3px}
-.lang-btn.active{color:var(--text)}
-.lang-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.lang-sep{color:var(--text3);font-size:.6rem}
-.lib-avatar{width:68px;height:68px;border-radius:50%;background:url('hero-photo-2.jpg') center 15%/cover no-repeat;filter:grayscale(1) contrast(1.1);border:2px solid var(--border);margin-bottom:.65rem}
-.lib-name{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.2rem}
-.lib-desc{font-size:.8rem;color:var(--text2);text-align:center;margin-bottom:1.5rem;max-width:300px;line-height:1.45}
-.lib-links{display:flex;flex-direction:column;gap:.55rem;width:100%}
-.lib-btn,.lib-btn:visited{display:flex;align-items:center;gap:.7rem;padding:.8rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--rs);text-decoration:none;color:var(--text);transition:all .2s;width:100%}
-.lib-btn:hover{background:var(--card-h);border-color:var(--border-h);transform:translateY(-1px)}
-.lib-btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.lib-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;background:var(--accent-dim);border:1px solid rgba(167,139,250,.1)}
-.lib-text{flex:1}
-.lib-title{font-family:var(--display);font-size:.78rem;font-weight:600;margin-bottom:.05rem}
-.lib-subdesc{font-size:.68rem;color:var(--text3);line-height:1.35}
-.lib-arrow{color:var(--text3);font-size:.7rem}
-.lib-footer{margin-top:1.75rem;font-size:.62rem;color:var(--text3)}
-.lib-footer a,.lib-footer a:visited{color:var(--text2);text-decoration:none;transition:color .2s}
+.bg-layer{position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:80px 80px;opacity:.3}
+.page{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;padding:3rem 1.25rem 2rem;max-width:480px;margin:0 auto;min-height:100vh}
+.lib-topbar{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:.65rem 1rem;background:rgba(8,8,10,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.lang-sw{display:flex;align-items:center;gap:.1rem}
+.lang-btn{background:none;border:none;padding:.15rem .28rem;color:var(--text3);cursor:pointer;font-family:var(--font);font-size:.65rem;font-weight:600;transition:color .2s;border-radius:3px;letter-spacing:.04em}
+.lang-btn.active{color:var(--text)}.lang-sep{color:var(--text3);font-size:.55rem;opacity:.5}
+.topbar-socials{display:flex;gap:.25rem;align-items:center}
+.ts{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:7px;border:1px solid rgba(255,255,255,.1);text-decoration:none;transition:all .2s;background:transparent}
+.ts:hover{border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.04)}
+.ts svg{width:15px;height:15px;fill:none;stroke:rgba(255,255,255,.82);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ts--fill svg{fill:rgba(255,255,255,.82);stroke:none}
+.lib-avatar{width:72px;height:72px;border-radius:50%;background:url('hero-photo-2.jpg') center 15%/cover no-repeat;filter:grayscale(1) contrast(1.1);border:2px solid var(--border);margin-bottom:.75rem;margin-top:.5rem}
+.lib-name{font-family:var(--display);font-size:1.1rem;font-weight:800;margin-bottom:.25rem;letter-spacing:.02em}
+.lib-desc{font-size:.8rem;color:var(--text2);text-align:center;margin-bottom:1.8rem;max-width:320px;line-height:1.5}
+.lib-links{display:flex;flex-direction:column;gap:0;width:100%}
+.lib-btn{display:flex;align-items:center;gap:.75rem;padding:.85rem 1.1rem;background:transparent;border-bottom:1px solid rgba(255,255,255,.05);text-decoration:none;color:var(--text);transition:all .2s;width:100%}
+.lib-btn:first-child{border-top:1px solid rgba(255,255,255,.05)}
+.lib-btn:hover{background:rgba(255,255,255,.025);padding-left:1.3rem}
+.lib-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;background:var(--accent-dim);border:1px solid rgba(180,156,255,.1);overflow:hidden}
+.lib-icon-img{padding:0;background:transparent;border-color:rgba(255,255,255,.08)}
+.lib-icon-img img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+.lib-text{flex:1}.lib-title{font-family:var(--display);font-size:.78rem;font-weight:600;margin-bottom:.08rem;letter-spacing:.01em}
+.lib-subdesc{font-size:.68rem;color:var(--text3);line-height:1.4}
+.lib-arrow{color:var(--text3);font-size:.65rem;opacity:.5;transition:opacity .2s}
+.lib-btn:hover .lib-arrow{opacity:1}
+.lib-section-title{font-family:var(--display);font-size:.72rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.12em;margin-top:2.5rem;margin-bottom:.8rem;text-align:center}
+.lib-form-wrap{width:100%;margin-top:2.5rem}
+.lib-form-wrap .s-label{font-size:.58rem;text-transform:uppercase;letter-spacing:.18em;color:var(--text3);font-weight:600;margin-bottom:.4rem;text-align:center}
+.lib-form-wrap h2{font-family:var(--display);font-size:1.1rem;font-weight:700;margin-bottom:.4rem;text-align:center;letter-spacing:-.01em}
+.lib-form-wrap .s-sub{color:var(--text2);font-size:.78rem;text-align:center;margin-bottom:1.2rem;line-height:1.5}
+.c-form{display:flex;flex-direction:column;gap:.65rem}
+.fg{display:flex;flex-direction:column;gap:.2rem}
+.fg label{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--text3);font-weight:600}
+.fg input,.fg textarea,.fg select{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:.65rem .8rem;color:var(--text);font-family:var(--font);font-size:.82rem;transition:border-color .2s;outline:none}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--accent)}
+.fg textarea{resize:vertical;min-height:72px}
+.fg select option{background:#0C0C0F;color:var(--text)}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:.65rem}
+.btn-sub{font-family:var(--display);font-weight:600;font-size:.75rem;padding:.7rem 1.2rem;border:none;border-radius:8px;background:var(--accent);color:var(--bg);cursor:pointer;transition:all .2s;margin-top:.15rem;letter-spacing:.01em;width:100%}
+.btn-sub:hover{opacity:.88;transform:translateY(-1px)}
+.form-msg{font-size:.72rem;margin-top:.4rem;display:none;text-align:center}
+.f-privacy{font-size:.62rem;color:var(--text3);line-height:1.5;margin-top:.5rem;text-align:center}
+.f-privacy a{color:var(--text2);text-decoration:underline;text-underline-offset:2px;transition:color .2s}
+.f-privacy a:hover{color:var(--accent)}
+.form-msg.ok{color:#6ee7b7;display:block}.form-msg.err{color:#fca5a5;display:block}
+.lib-footer{margin-top:2rem;font-size:.6rem;color:var(--text3);letter-spacing:.02em;text-align:center;padding-bottom:1rem}
+.lib-footer a{color:var(--text2);text-decoration:none;transition:color .2s}
 .lib-footer a:hover{color:var(--accent)}
-@media(max-width:400px){.page{padding:2rem 1rem}.lib-btn{padding:.7rem .85rem}}
+@media(max-width:400px){.page{padding:2.5rem 1rem 1.5rem}.lib-btn{padding:.75rem .9rem}.f-row{grid-template-columns:1fr}.topbar-socials{gap:.15rem}.ts{width:28px;height:28px}.ts svg{width:13px;height:13px}}
 </style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8B51ZLDW8M"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8B51ZLDW8M');</script>
 </head>
 <body>
 <div class="bg-layer"></div>
-<div class="bg-portrait"></div>
-<div class="lib-lang">
-  <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-  <span class="lang-sep">/</span>
-  <button class="lang-btn active" data-lang="hu" aria-pressed="true">HU</button>
+<div class="lib-topbar">
+  <div class="lang-sw"><button class="lang-btn" data-lang="en" aria-pressed="false">EN</button><span class="lang-sep">/</span><button class="lang-btn active" data-lang="hu" aria-pressed="true">HU</button></div>
+  <div class="topbar-socials">
+    <a href="https://www.facebook.com/profile.php?id=61560269362449" target="_blank" rel="noopener" class="ts ts--fill" title="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/officialkovacstamas" target="_blank" rel="noopener" class="ts" title="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="rgba(255,255,255,.82)" stroke="none"/></svg></a>
+    <a href="https://www.tiktok.com/@officialkovacstamas" target="_blank" rel="noopener" class="ts ts--fill" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.71a8.21 8.21 0 004.76 1.52V6.78a4.84 4.84 0 01-1-.09z"/></svg></a>
+    <a href="https://www.youtube.com/@officialkovacstamas" target="_blank" rel="noopener" class="ts" title="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="rgba(255,255,255,.82)" stroke="none"/></svg></a>
+    <a href="https://x.com/kvcstms11" target="_blank" rel="noopener" class="ts ts--fill" title="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.linkedin.com/in/kvcstms" target="_blank" rel="noopener" class="ts ts--fill" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
+    <a href="https://www.threads.com/@tamaskovacsofficial" target="_blank" rel="noopener" class="ts ts--fill" title="Threads"><svg viewBox="0 0 24 24"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.508 5.47l-2.4.69c-1.067-3.86-3.52-5.79-7.305-5.746h-.013c-2.62.017-4.632.885-5.98 2.577-1.19 1.49-1.84 3.637-1.862 6.39v.016c.022 2.752.674 4.898 1.862 6.386 1.347 1.69 3.36 2.557 5.98 2.574h.005c2.073-.015 3.68-.547 4.78-1.58.976-.92 1.49-2.18 1.49-3.65l-.003-.195c-.04-1.678-.686-2.955-1.865-3.686-.58-.36-1.282-.588-2.084-.677.07 1.2-.17 2.17-.72 2.88-.63.81-1.56 1.22-2.77 1.22-.93 0-1.726-.32-2.3-.92-.563-.59-.87-1.39-.87-2.3 0-2.05 1.42-3.5 3.46-3.5.85 0 1.58.23 2.17.68l-.04-2.03 2.39-.04.1 4.04c.01.37.01.73.01 1.07 0 2.26-.78 4.09-2.24 5.29-1.36 1.12-3.26 1.7-5.66 1.72z"/></svg></a>
+    <a href="https://t.me/+Mk5bfbCfUf1lMGE0" target="_blank" rel="noopener" class="ts ts--fill" title="Telegram"><svg viewBox="0 0 24 24"><path d="M22.05 1.577c-.393-.016-.784.08-1.117.235-2.127.952-17.794 7.482-19.632 8.28-.585.26-1.148.585-1.246 1.068-.1.5.372.89.812 1.09l4.6 1.862c.16.065.334.073.5.024l.004-.001 13.06-8.204c.25-.155.46.12.24.3L9.1 14.47l-.264 3.9c.037.553.396.846.728.846.239 0 .478-.127.678-.325l2.006-1.932 4.14 3.058c.56.413 1.3.19 1.496-.38l3.714-17.636c.2-.945-.335-1.603-1.11-1.6-.04 0-.08 0-.12.002l-.318.174z"/></svg></a>
+  </div>
 </div>
 <div class="page">
   <div class="lib-avatar"></div>
   <div class="lib-name">Tamás Kovács</div>
-  <div class="lib-desc" data-i18n="lib_desc">Itt találsz meg: projektek, napi összefoglalók, tartalmak.</div>
+  <div class="lib-desc" data-i18n="lib_desc">Projektek, napi összefoglalók és tartalmak — egy helyen.</div>
   <div class="lib-links" id="libLinks"></div>
+  <div class="lib-section-title" data-i18n="aff_title">Ajánlói linkek</div>
+  <div class="lib-links" id="affLinks"></div>
+  <div class="lib-form-wrap">
+    <div class="s-label" data-i18n="co_label">Kapcsolat</div>
+    <h2 data-i18n="co_title">Dolgozzunk együtt</h2>
+    <p class="s-sub" data-i18n="co_sub">Partnerség, szponzoráció, tartalmi együttműködés, tanácsadás.</p>
+    <form class="c-form" id="contactForm" action="https://formsubmit.co/tamas11kovacs@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="tamaskovacs.eu links"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
+      <div class="f-row">
+        <div class="fg"><label for="cf_name" data-i18n="f_n">Név</label><input type="text" id="cf_name" name="name" required data-i18n-ph="fp_n" placeholder="A neved"></div>
+        <div class="fg"><label for="cf_email">Email</label><input type="email" id="cf_email" name="email" placeholder="te@email.com" required></div>
+      </div>
+      <div class="fg"><label for="cf_type" data-i18n="f_t">Téma</label><select id="cf_type" name="type"><option value="partnership" data-i18n="o1">Partnerség / Szponzoráció</option><option value="collab" data-i18n="o2">Tartalmi együttműködés</option><option value="consulting" data-i18n="o3">Tanácsadás</option><option value="other" data-i18n="o4">Egyéb</option></select></div>
+      <div class="fg"><label for="cf_msg" data-i18n="f_m">Üzenet</label><textarea id="cf_msg" name="message" required data-i18n-ph="fp_m" placeholder="Írd le az ötleted..."></textarea></div>
+      <button type="submit" class="btn-sub" data-i18n="f_s">Küldés →</button>
+      <p class="f-privacy" data-i18n-html="f_priv">Az itt megadott adatok kizárólag a megkeresés megválaszolására kerülnek felhasználásra. Részletek az <a href="./privacy.html">Adatkezelési tájékoztatóban</a>.</p>
+      <div class="form-msg" id="formMsg"></div>
+    </form>
+  </div>
   <div class="lib-footer"><a href="./index.html" data-i18n="lib_full">Teljes oldal →</a></div>
 </div>
 <script>
-const CONFIG={
-  piacradar:'https://t.me/+Mk5bfbCfUf1lMGE0',
-  ausztriaradar:'https://preview.mailerlite.io/forms/122717218075691469/8716491/share',
-  sample:'#',
-  tiktok:'https://www.tiktok.com/@officialkovacstamas',
-  instagram:'https://www.instagram.com/officialkovacstamas',
-  youtube:'https://www.youtube.com/@officialkovacstamas',
-  linkedin:'https://www.linkedin.com/in/kvcstms',
-  email:'mailto:tamas11kovacs@gmail.com',
-};
-const BUTTONS=[
-  {url:CONFIG.piacradar,icon:'\u{1F4C8}',hu_t:'Piacradar \u2014 Telegram',en_t:'Piacradar \u2014 Telegram',hu_d:'Magyar piaci \u00f6sszefoglal\u00f3k, makr\u00f3 \u00e9s gyorsjelent\u00e9sek.',en_d:'Hungarian market briefings, macro and earnings.'},
-  {url:CONFIG.ausztriaradar,icon:'\u{1F1E6}\u{1F1F9}',hu_t:'Ausztria Radar \u2014 H\u00edrrev\u00e9l',en_t:'Ausztria Radar \u2014 Newsletter',hu_d:'Osztr\u00e1k h\u00edrek \u00e9s h\u00e9tk\u00f6znapok magyarul.',en_d:'Austria news and life in Hungarian.'},
-  {url:CONFIG.sample,icon:'\u{1F4C4}',hu_t:'Friss Piacradar minta',en_t:'Latest Piacradar sample',hu_d:'N\u00e9zd meg egy friss esti piaci \u00f6sszefoglal\u00f3t.',en_d:'See a recent evening market wrap.'},
-  {url:CONFIG.tiktok,icon:'\u{1F3B5}',hu_t:'TikTok',en_t:'TikTok',hu_d:'R\u00f6vid vide\u00f3k piacokr\u00f3l \u00e9s az ausztriai \u00e9letr\u0151l.',en_d:'Shorts about markets and Austrian life.'},
-  {url:CONFIG.instagram,icon:'\u{1F4F8}',hu_t:'Instagram',en_t:'Instagram',hu_d:'K\u00e9pek, sztorik, \u00e9let Ausztri\u00e1ban.',en_d:'Snapshots and stories from Austria.'},
-  {url:CONFIG.youtube,icon:'\u25B6\uFE0F',hu_t:'YouTube',en_t:'YouTube',hu_d:'Hosszabb magyar\u00e1z\u00f3 vide\u00f3k \u00e9s elemz\u00e9sek.',en_d:'Longer explainers and breakdowns.'},
-  {url:CONFIG.linkedin,icon:'\u{1F4BC}',hu_t:'LinkedIn',en_t:'LinkedIn',hu_d:'Szakmai h\u00e1tt\u00e9r \u00e9s term\u00e9kmunka.',en_d:'My product and telecom background.'},
-  {url:CONFIG.email,icon:'\u2709\uFE0F',hu_t:'Kapcsolat',en_t:'Contact',hu_d:'Egy\u00fcttm\u0171k\u00f6d\u00e9s, megkeres\u00e9s, aj\u00e1nlat.',en_d:'Work with me or propose a collab.'},
+var BUTTONS=[
+  {url:'https://piacradar.eu/',img:'logo-piacradar.png',hu_t:'Piacradar',en_t:'Piacradar',hu_d:'Tőzsde hírek és gazdasági elemzések magyarul — piacradar.eu',en_d:'Stock market news and analysis — piacradar.eu'},
+  {url:'https://ausztriaradar.hu/',img:'logo-ausztria-radar.png',hu_t:'Ausztria Radar',en_t:'Ausztria Radar',hu_d:'Ausztriai hírek és információk, magyarul elmagyarázva napi hírlevélben.',en_d:'Austria news and life in Hungarian — newsletter.'}
 ];
-const T={
-  hu:{lib_desc:'Itt tal\u00e1lsz meg: projektek, napi \u00f6sszefoglal\u00f3k, tartalmak.',lib_full:'Teljes oldal \u2192'},
-  en:{lib_desc:'Where to find my work and daily briefings.',lib_full:'Full site \u2192'}
+var AFFILIATES=[
+  {url:'https://kriptoteka.hu/',icon:'\u20bf',hu_t:'Kripto és gazdasági oktatóanyagok',en_t:'Kripto és gazdasági oktatóanyagok',hu_d:'20% kedvezmény a kovacstamas kuponkóddal.',en_d:'20% off with coupon code kovacstamas.'},
+  {url:'https://etoro.tw/3VkADMv',icon:'\ud83d\udcc8',hu_t:'eToro meghívó tőzsdei kereskedéshez',en_t:'eToro meghívó tőzsdei kereskedéshez',hu_d:'Tőzsdei és kriptó kereskedés.',en_d:'Stock and crypto trading.'},
+  {url:'https://saily.onelink.me/ymzx/referrals',icon:'\u2708\ufe0f',hu_t:'Saily eSIM utazáshoz, -5$-os kód: ANNANI0995',en_t:'Saily eSIM utazáshoz, -5$-os kód: ANNANI0995',hu_d:'saily.com',en_d:'saily.com'},
+  {url:'https://wa.me/4366306351327',icon:'\u26a1',hu_t:'Barbara - energia Ausztriában',en_t:'Barbara - energia Ausztriában',hu_d:'Energiaszerződés tanácsadás.',en_d:'Energy contract consulting.'},
+  {url:'https://www.vetoszabo.at/',icon:'\ud83d\udccb',hu_t:'Ausztriai ügyéntézés, adótanácsadás, tolmácsolás',en_t:'Ausztriai ügyéntézés, adótanácsadás, tolmácsolás',hu_d:'vetoszabo.at',en_d:'vetoszabo.at'},
+  {url:'https://www.facebook.com/profile.php?id=61553997456929',icon:'\ud83c\udde9\ud83c\uddea',hu_t:'Tanulj Németül!',en_t:'Tanulj Németül!',hu_d:'Német nyelvi oktatás.',en_d:'German language courses.'},
+  {url:'https://www.facebook.com/profile.php?id=100057158962315',icon:'\ud83c\uddfa\ud83c\uddf8',hu_t:'Tanulj Angolul!',en_t:'Tanulj Angolul!',hu_d:'Angol nyelvi oktatás.',en_d:'English language courses.'}
+];
+var T={
+  hu:{lib_desc:'Projektek, napi összefoglalók és tartalmak \u2014 egy helyen.',lib_full:'Teljes oldal \u2192',aff_title:'Ajánlói linkek',co_label:'Kapcsolat',co_title:'Dolgozzunk együtt',co_sub:'Partnerség, szponzoráció, tartalmi együttműködés, tanácsadás.',f_n:'Név',f_t:'Téma',f_m:'Üzenet',f_s:'Küldés \u2192',o1:'Partnerség / Szponzoráció',o2:'Tartalmi együttműködés',o3:'Tanácsadás',o4:'Egyéb',fp_n:'A neved',fp_m:'Írd le az ötleted...',f_priv:'Az itt megadott adatok kizárólag a megkeresés megválaszolására kerülnek felhasználásra. Részletek az <a href="./privacy.html">Adatkezelési tájékoztatóban</a>.',form_ok:'Köszönöm! Hamarosan válaszolok.',form_err:'Hiba történt. Próbáld újra.'},
+  en:{lib_desc:'Projects, daily briefings, and content \u2014 all in one place.',lib_full:'Full site \u2192',aff_title:'Affiliate links',co_label:'Contact',co_title:"Let's Work Together",co_sub:'Partnerships, sponsorships, content collaborations, consulting.',f_n:'Name',f_t:'Topic',f_m:'Message',f_s:'Send \u2192',o1:'Partnership / Sponsorship',o2:'Content Collaboration',o3:'Consulting',o4:'Other',fp_n:'Your name',fp_m:'Tell me your idea...',f_priv:"The data submitted here is used solely to respond to your inquiry. Details in the <a href='./privacy.html'>Privacy Notice</a>.",form_ok:"Thanks! I'll get back to you soon.",form_err:'Something went wrong. Please try again.'}
 };
-let lang=localStorage.getItem('tk_lang')||'hu';
-function render(){
-  const c=document.getElementById('libLinks');c.innerHTML='';
-  BUTTONS.forEach(b=>{
-    const a=document.createElement('a');
-    a.href=b.url;a.target='_blank';a.rel='noopener';a.className='lib-btn';
-    a.innerHTML='<div class="lib-icon">'+b.icon+'</div><div class="lib-text"><div class="lib-title">'+b[lang+'_t']+'</div><div class="lib-subdesc">'+b[lang+'_d']+'</div></div><span class="lib-arrow">\u2192</span>';
-    c.appendChild(a);
-  });
-}
-function setLang(l){
-  lang=l;localStorage.setItem('tk_lang',l);
-  document.documentElement.lang=l;
-  const t=T[l];
-  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(t[k]!=null)el.textContent=t[k];});
-  document.querySelectorAll('.lang-btn').forEach(b=>{const a=b.dataset.lang===l;b.classList.toggle('active',a);b.setAttribute('aria-pressed',a);});
-  render();
-}
-document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+var lang=localStorage.getItem('tk_lang')||'en';
+function renderList(items,cid){var c=document.getElementById(cid);c.innerHTML='';items.forEach(function(b){var a=document.createElement('a');a.href=b.url;a.target='_blank';a.rel='noopener';a.className='lib-btn';var iconHtml=b.img?'<div class="lib-icon lib-icon-img"><img src="'+b.img+'" alt=""></div>':'<div class="lib-icon">'+b.icon+'</div>';a.innerHTML=iconHtml+'<div class="lib-text"><div class="lib-title">'+b[lang+'_t']+'</div><div class="lib-subdesc">'+b[lang+'_d']+'</div></div><span class="lib-arrow">\u2192</span>';c.appendChild(a);});}
+function setLang(l){lang=l;localStorage.setItem('tk_lang',l);document.documentElement.lang=l;var t=T[l];document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(t[k]!=null)el.textContent=t[k];});document.querySelectorAll('[data-i18n-html]').forEach(function(el){var k=el.getAttribute('data-i18n-html');if(t[k]!=null)el.innerHTML=t[k];});document.querySelectorAll('[data-i18n-ph]').forEach(function(el){var k=el.getAttribute('data-i18n-ph');if(t[k]!=null)el.placeholder=t[k];});document.querySelectorAll('.lang-btn').forEach(function(b){var a=b.dataset.lang===l;b.classList.toggle('active',a);b.setAttribute('aria-pressed',a);});renderList(BUTTONS,'libLinks');renderList(AFFILIATES,'affLinks');}
+document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
 setLang(lang);
+document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();var form=this;var msg=document.getElementById('formMsg');var data=new FormData(form);fetch(form.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',body:data,headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){msg.className='form-msg ok';msg.textContent=T[lang].form_ok;form.reset();}else{msg.className='form-msg err';msg.textContent=T[lang].form_err;}}).catch(function(){msg.className='form-msg err';msg.textContent=T[lang].form_err;});});
 </script>
 </body>
 </html>
