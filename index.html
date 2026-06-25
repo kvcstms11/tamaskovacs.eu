@@ -29,30 +29,30 @@
 {
   "@context":"https://schema.org",
   "@graph":[
-    {
-      "@type":"WebSite",
-      "name":"Tamás Kovács",
-      "url":"https://tamaskovacs.eu",
-      "description":"I build and ship digital products — from strategy to launch.",
-      "inLanguage":["en","hu"]
-    },
-    {
-      "@type":"Person",
-      "name":"Tamás Kovács",
-      "url":"https://tamaskovacs.eu",
-      "jobTitle":"Product Manager",
-      "description":"Product manager and content creator based in Austria. Building Piacradar and Ausztria Radar.",
-      "knowsAbout":["Product Management","5G","IoT","Go-to-Market Strategy","Content Creation"],
-      "sameAs":[
-        "https://www.linkedin.com/in/kvcstms",
-        "https://x.com/kvcstms11",
-        "https://www.instagram.com/officialkovacstamas",
-        "https://www.tiktok.com/@officialkovacstamas",
-        "https://www.youtube.com/@officialkovacstamas",
-        "https://t.me/+Mk5bfbCfUf1lMGE0",
+    {
+      "@type":"WebSite",
+      "name":"Tamás Kovács",
+      "url":"https://tamaskovacs.eu",
+      "description":"I build and ship digital products — from strategy to launch.",
+      "inLanguage":["en","hu"]
+    },
+    {
+      "@type":"Person",
+      "name":"Tamás Kovács",
+      "url":"https://tamaskovacs.eu",
+      "jobTitle":"Product Manager",
+      "description":"Product manager and content creator based in Austria. Building Piacradar and Ausztria Radar.",
+      "knowsAbout":["Product Management","5G","IoT","Go-to-Market Strategy","Content Creation"],
+      "sameAs":[
+        "https://www.linkedin.com/in/kvcstms",
+        "https://x.com/kvcstms11",
+        "https://www.instagram.com/officialkovacstamas",
+        "https://www.tiktok.com/@officialkovacstamas",
+        "https://www.youtube.com/@officialkovacstamas",
+        "https://t.me/+Mk5bfbCfUf1lMGE0",
         "https://www.threads.com/@tamaskovacsofficial"
-      ]
-    }
+      ]
+    }
   ]
 }
 </script>
@@ -108,6 +108,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,10,0.88)
 .nav-center{display:flex;align-items:center;gap:1.6rem;list-style:none}
 .nav-center a{color:var(--text3);text-decoration:none;font-size:.72rem;font-weight:500;letter-spacing:.03em;transition:color .2s;text-transform:uppercase}
 .nav-center a:hover,.nav-center a:focus{color:var(--text)}
+.nav-center a.menu-links{color:#FCD34D}
+.nav-center a.menu-links:hover,.nav-center a.menu-links:focus{color:#FBBF24}
 .nav-right-area{display:flex;align-items:center;gap:.35rem;flex-shrink:0}
 .nav-links-btn{display:inline-flex;align-items:center;font-family:var(--display);font-weight:600;font-size:.62rem;padding:.28rem .6rem;border:1px solid #FCD34D;border-radius:6px;background:transparent;color:#FCD34D;text-decoration:none;transition:all .2s;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
 .nav-links-btn:hover{background:rgba(252,211,77,0.08);border-color:#FBBF24;color:#FBBF24;transform:translateY(-1px)}
@@ -248,31 +250,31 @@ footer{padding:2rem 0;text-align:center;font-size:.6rem;color:var(--text3);lette
 <div id="page">
 <nav>
   <div class="nav-row1">
-    <a href="/" class="nav-logo">TK</a>
-    <ul class="nav-center">
-      <li><a href="#about" data-i18n="n_about">Rólam</a></li>
-      <li><a href="#building" data-i18n="n_build">Projektek</a></li>
-      <li><a href="#delivered" data-i18n="n_del">Portfólió</a></li>
-      <li><a href="./links.html" data-i18n="n_links">Linkek</a></li>
-      <li><a href="#contact" data-i18n="n_con">Kapcsolat</a></li>
-    </ul>
-    <div class="nav-right-area">
-      <div class="lang-sw">
-        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-        <span class="lang-sep">/</span>
-        <button class="lang-btn active" data-lang="hu" aria-pressed="true">HU</button>
-      </div>
-      <button class="nav-toggle" onclick="openMob()" aria-label="Menu"><svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-    </div>
+    <a href="/" class="nav-logo">TK</a>
+    <ul class="nav-center">
+      <li><a href="#about" data-i18n="n_about">Rólam</a></li>
+      <li><a href="#building" data-i18n="n_build">Projektek</a></li>
+      <li><a href="#delivered" data-i18n="n_del">Portfólió</a></li>
+      <li><a href="./links.html" class="menu-links" data-i18n="n_links">Linkek</a></li>
+      <li><a href="#contact" data-i18n="n_con">Kapcsolat</a></li>
+    </ul>
+    <div class="nav-right-area">
+      <div class="lang-sw">
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn active" data-lang="hu" aria-pressed="true">HU</button>
+      </div>
+      <button class="nav-toggle" onclick="openMob()" aria-label="Menu"><svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
   </div>
   <div class="nav-row2"><div class="nav-socials">
-    <a href="https://www.facebook.com/profile.php?id=61560269362449" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-    <a href="https://www.instagram.com/officialkovacstamas" target="_blank" rel="noopener" class="nav-soc" title="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="rgba(255,255,255,.82)" stroke="none"/></svg></a>
-    <a href="https://www.tiktok.com/@officialkovacstamas" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.71a8.21 8.21 0 004.76 1.52V6.78a4.84 4.84 0 01-1-.09z"/></svg></a>
-    <a href="https://www.youtube.com/@officialkovacstamas" target="_blank" rel="noopener" class="nav-soc" title="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="rgba(255,255,255,.82)" stroke="none"/></svg></a>
-    <a href="https://x.com/kvcstms11" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-    <a href="https://www.linkedin.com/in/kvcstms" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
-    <a href="https://t.me/+Mk5bfbCfUf1lMGE0" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="Telegram"><svg viewBox="0 0 24 24"><path d="M22.05 1.577c-.393-.016-.784.08-1.117.235-2.127.952-17.794 7.482-19.632 8.28-.585.26-1.148.585-1.246 1.068-.1.5.372.89.812 1.09l4.6 1.862c.16.065.334.073.5.024l.004-.001 13.06-8.204c.25-.155.46.12.24.3L9.1 14.47l-.264 3.9c.037.553.396.846.728.846.239 0 .478-.127.678-.325l2.006-1.932 4.14 3.058c.56.413 1.3.19 1.496-.38l3.714-17.636c.2-.945-.335-1.603-1.11-1.6-.04 0-.08 0-.12.002l-.318.174z"/></svg></a>
+    <a href="https://www.facebook.com/profile.php?id=61560269362449" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/officialkovacstamas" target="_blank" rel="noopener" class="nav-soc" title="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="rgba(255,255,255,.82)" stroke="none"/></svg></a>
+    <a href="https://www.tiktok.com/@officialkovacstamas" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.71a8.21 8.21 0 004.76 1.52V6.78a4.84 4.84 0 01-1-.09z"/></svg></a>
+    <a href="https://www.youtube.com/@officialkovacstamas" target="_blank" rel="noopener" class="nav-soc" title="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="rgba(255,255,255,.82)" stroke="none"/></svg></a>
+    <a href="https://x.com/kvcstms11" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.linkedin.com/in/kvcstms" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
+    <a href="https://t.me/+Mk5bfbCfUf1lMGE0" target="_blank" rel="noopener" class="nav-soc nav-soc--fill" title="Telegram"><svg viewBox="0 0 24 24"><path d="M22.05 1.577c-.393-.016-.784.08-1.117.235-2.127.952-17.794 7.482-19.632 8.28-.585.26-1.148.585-1.246 1.068-.1.5.372.89.812 1.09l4.6 1.862c.16.065.334.073.5.024l.004-.001 13.06-8.204c.25-.155.46.12.24.3L9.1 14.47l-.264 3.9c.037.553.396.846.728.846.239 0 .478-.127.678-.325l2.006-1.932 4.14 3.058c.56.413 1.3.19 1.496-.38l3.714-17.636c.2-.945-.335-1.603-1.11-1.6-.04 0-.08 0-.12.002l-.318.174z"/></svg></a>
   </div></div>
 </nav>
 
@@ -280,15 +282,15 @@ footer{padding:2rem 0;text-align:center;font-size:.6rem;color:var(--text3);lette
 
 <section class="hero"><div class="container">
   <div class="hero-inner">
-    <div class="hero-name">Tamás Kovács</div>
-    <h1 class="hero-hl">CREATE<i class="dot"></i>BUILD<i class="dot"></i>REACH</h1>
-    <div class="hero-sub" data-i18n="h_sub">Termék · Növekedés · Elosztás</div>
-    <p class="hero-desc" data-i18n="h_desc">Digitális termékeket építek és piacra viszek — stratégiától a launchig. Product, growth és distribution metszéspontján dolgozom.</p>
-    <div class="hero-stats">
-      <div><span class="hs-n">50K+</span><div class="hs-l" data-i18n="s_fol">követő</div></div>
-      <div><span class="hs-n">5</span><div class="hs-l" data-i18n="s_ship">szállított termék</div></div>
-      <div><span class="hs-n">10+</span><div class="hs-l" data-i18n="s_yr">év a technológiában</div></div>
-    </div>
+    <div class="hero-name">Tamás Kovács</div>
+    <h1 class="hero-hl">CREATE<i class="dot"></i>BUILD<i class="dot"></i>REACH</h1>
+    <div class="hero-sub" data-i18n="h_sub">Termék · Növekedés · Elosztás</div>
+    <p class="hero-desc" data-i18n="h_desc">Digitális termékeket építek és piacra viszek — stratégiától a launchig. Product, growth és distribution metszéspontján dolgozom.</p>
+    <div class="hero-stats">
+      <div><span class="hs-n">50K+</span><div class="hs-l" data-i18n="s_fol">követő</div></div>
+      <div><span class="hs-n">5</span><div class="hs-l" data-i18n="s_ship">szállított termék</div></div>
+      <div><span class="hs-n">10+</span><div class="hs-l" data-i18n="s_yr">év a technológiában</div></div>
+    </div>
   </div>
 </div></section>
 
@@ -308,18 +310,18 @@ footer{padding:2rem 0;text-align:center;font-size:.6rem;color:var(--text3);lette
   <div class="s-label" data-i18n="b_label">Amin dolgozom</div>
   <h2 class="s-title" data-i18n="b_title">Aktuális projektek</h2>
   <div class="build-grid">
-    <div class="build-item fi"><div class="build-sep"></div>
-      <h3>📈 Piacradar</h3>
-      <span class="build-tag" data-i18n="bt_pr">Piaci briefek · Telegram</span>
-      <div class="desc" data-i18n="bd_pr">Napi piaci összefoglaló magyarul — makró, gyorsjelentések, kriptó. Megspórolok neked 20 percet minden reggel.</div>
-      <div class="build-actions"><a href="https://t.me/+Mk5bfbCfUf1lMGE0" target="_blank" rel="noopener" class="btn-primary" data-i18n="cta_pr">Csatlakozz a Piacradarhoz Telegramon →</a></div>
-    </div>
-    <div class="build-item fi"><div class="build-sep"></div>
-      <h3><svg width="20" height="14" viewBox="0 0 20 14" style="vertical-align:middle;margin-right:4px;border-radius:2px"><rect width="20" height="14" fill="#fff"/><rect width="20" height="4.67" fill="#ED2939"/><rect y="9.33" width="20" height="4.67" fill="#ED2939"/></svg> Ausztria Radar</h3>
-      <span class="build-tag" data-i18n="bt_ar">Osztrák élet magyarul · Hírlevél</span>
-      <div class="desc" data-i18n="bd_ar">Osztrák hírek, adózás, egészségügy — magyarul, naponta. Az ausztriai magyaroknak szól.</div>
-      <div class="build-actions"><a href="https://ausztriaradar.hu/" target="_blank" rel="noopener" class="btn-primary" data-i18n="cta_ar">Iratkozz fel a hírlevélre →</a></div>
-    </div>
+    <div class="build-item fi"><div class="build-sep"></div>
+      <h3>📈 Piacradar</h3>
+      <span class="build-tag" data-i18n="bt_pr">Napi piaci összefoglalók · piacradar.eu</span>
+      <div class="desc" data-i18n="bd_pr">Napi piaci összefoglaló magyarul — makró, gyorsjelentések, kriptó. Megspórolok neked 20 percet minden reggel.</div>
+      <div class="build-actions"><a href="https://piacradar.eu/" target="_blank" rel="noopener" class="btn-primary" data-i18n="cta_pr">Irány a Piacradar →</a></div>
+    </div>
+    <div class="build-item fi"><div class="build-sep"></div>
+      <h3><svg width="20" height="14" viewBox="0 0 20 14" style="vertical-align:middle;margin-right:4px;border-radius:2px"><rect width="20" height="14" fill="#fff"/><rect width="20" height="4.67" fill="#ED2939"/><rect y="9.33" width="20" height="4.67" fill="#ED2939"/></svg> Ausztria Radar</h3>
+      <span class="build-tag" data-i18n="bt_ar">Osztrák élet magyarul · Hírlevél</span>
+      <div class="desc" data-i18n="bd_ar">Osztrák hírek, adózás, egészségügy — magyarul, naponta. Az ausztriai magyaroknak szól.</div>
+      <div class="build-actions"><a href="https://ausztriaradar.hu/" target="_blank" rel="noopener" class="btn-primary" data-i18n="cta_ar">Iratkozz fel a hírlevélre →</a></div>
+    </div>
   </div>
 </div></section>
 
@@ -329,31 +331,31 @@ footer{padding:2rem 0;text-align:center;font-size:.6rem;color:var(--text3);lette
   <div class="s-label" data-i18n="d_label">Portfólió</div>
   <h2 class="s-title" data-i18n="d_title">Amit szállítottam</h2>
   <div class="del-list">
-    <div class="del-entry fi"><div class="del-icon">5G</div><div>
-      <div class="del-head"><h4 data-i18n="d_d5g_t">5G Private Network portfólió &amp; GTM — Drei Austria</h4><span class="del-outcome" data-i18n="d_d5g_o">Ausztria első kereskedelmi 5G MPN</span></div>
-      <div class="del-year">2022–2024</div>
-      <div class="del-desc" data-i18n="d_d5g_d">Teljes go-to-market stratégia: vendor kiválasztás, folyamattervezés, dokumentáció és kereskedelmi indulás.</div>
-    </div></div>
-    <div class="del-entry fi"><div class="del-icon">🛡</div><div>
-      <div class="del-head"><h4 data-i18n="d_cy_t">Gyermekvédelmi app — Cyan Security</h4><span class="del-outcome" data-i18n="d_cy_o">MVP validálva, több ezer felhasználó</span></div>
-      <div class="del-year">2021</div>
-      <div class="del-desc" data-i18n="d_cy_d">UI/UX fejlesztés, click-dummy validáció és felhasználói tesztelés. Digitális biztonsági termék családoknak.</div>
-    </div></div>
-    <div class="del-entry fi"><div class="del-icon">5G</div><div>
-      <div class="del-head"><h4 data-i18n="d_v5g_t">5G ipari magánhálózat — Vodafone Hungary</h4><span class="del-outcome" data-i18n="d_v5g_o">Első ipari 5G MPN Magyarországon</span></div>
-      <div class="del-year">2019–2020</div>
-      <div class="del-desc" data-i18n="d_v5g_d">Ipari use case fejlesztés és Magyarország első B2B 5G magánhálózatának szállítása.</div>
-    </div></div>
-    <div class="del-entry fi"><div class="del-icon">P</div><div>
-      <div class="del-head"><h4 data-i18n="d_sp_t">Smart Parking — Vodafone Hungary</h4><span class="del-outcome" data-i18n="d_sp_o">100K+ letöltés, első a piacon</span></div>
-      <div class="del-year">2018–2019</div>
-      <div class="del-desc" data-i18n="d_sp_d">Teljes IoT termék: szenzorok, backend, API-k, mobilapp és dashboard. Magyarország első okos parkolási megoldása.</div>
-    </div></div>
-    <div class="del-entry fi"><div class="del-icon">4G</div><div>
-      <div class="del-head"><h4 data-i18n="d_tel_t">4G Core és segélyhívó rendszer — Telenor Hungary</h4><span class="del-outcome" data-i18n="d_tel_o">eCall, 112, VoLTE</span></div>
-      <div class="del-year">2016</div>
-      <div class="del-desc" data-i18n="d_tel_d">Segélyhívó hívásfolyamatok tervezése (eCall, 112) és VoLTE core network tesztelés.</div>
-    </div></div>
+    <div class="del-entry fi"><div class="del-icon">5G</div><div>
+      <div class="del-head"><h4 data-i18n="d_d5g_t">5G Private Network portfólió &amp; GTM — Drei Austria</h4><span class="del-outcome" data-i18n="d_d5g_o">Ausztria első kereskedelmi 5G MPN</span></div>
+      <div class="del-year">2022–2024</div>
+      <div class="del-desc" data-i18n="d_d5g_d">Teljes go-to-market stratégia: vendor kiválasztás, folyamattervezés, dokumentáció és kereskedelmi indulás.</div>
+    </div></div>
+    <div class="del-entry fi"><div class="del-icon">🛡</div><div>
+      <div class="del-head"><h4 data-i18n="d_cy_t">Gyermekvédelmi app — Cyan Security</h4><span class="del-outcome" data-i18n="d_cy_o">MVP validálva, több ezer felhasználó</span></div>
+      <div class="del-year">2021</div>
+      <div class="del-desc" data-i18n="d_cy_d">UI/UX fejlesztés, click-dummy validáció és felhasználói tesztelés. Digitális biztonsági termék családoknak.</div>
+    </div></div>
+    <div class="del-entry fi"><div class="del-icon">5G</div><div>
+      <div class="del-head"><h4 data-i18n="d_v5g_t">5G ipari magánhálózat — Vodafone Hungary</h4><span class="del-outcome" data-i18n="d_v5g_o">Első ipari 5G MPN Magyarországon</span></div>
+      <div class="del-year">2019–2020</div>
+      <div class="del-desc" data-i18n="d_v5g_d">Ipari use case fejlesztés és Magyarország első B2B 5G magánhálózatának szállítása.</div>
+    </div></div>
+    <div class="del-entry fi"><div class="del-icon">P</div><div>
+      <div class="del-head"><h4 data-i18n="d_sp_t">Smart Parking — Vodafone Hungary</h4><span class="del-outcome" data-i18n="d_sp_o">100K+ letöltés, első a piacon</span></div>
+      <div class="del-year">2018–2019</div>
+      <div class="del-desc" data-i18n="d_sp_d">Teljes IoT termék: szenzorok, backend, API-k, mobilapp és dashboard. Magyarország első okos parkolási megoldása.</div>
+    </div></div>
+    <div class="del-entry fi"><div class="del-icon">4G</div><div>
+      <div class="del-head"><h4 data-i18n="d_tel_t">4G Core és segélyhívó rendszer — Telenor Hungary</h4><span class="del-outcome" data-i18n="d_tel_o">eCall, 112, VoLTE</span></div>
+      <div class="del-year">2016</div>
+      <div class="del-desc" data-i18n="d_tel_d">Segélyhívó hívásfolyamatok tervezése (eCall, 112) és VoLTE core network tesztelés.</div>
+    </div></div>
   </div>
 </div></section>
 
@@ -364,16 +366,16 @@ footer{padding:2rem 0;text-align:center;font-size:.6rem;color:var(--text3);lette
   <h2 class="s-title" data-i18n="co_title">Dolgozzunk együtt</h2>
   <p class="s-sub" data-i18n="co_sub">Partnerség, szponzoráció, tartalmi együttműködés, tanácsadás.</p>
   <form class="c-form" id="contactForm" action="https://formsubmit.co/tamas11kovacs@gmail.com" method="POST">
-    <input type="hidden" name="_subject" value="tamaskovacs.eu"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
-    <div class="f-row">
-      <div class="fg"><label for="name" data-i18n="f_n">Név</label><input type="text" id="name" name="name" required data-i18n-ph="fp_n" placeholder="A neved"></div>
-      <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="te@email.com" required></div>
-    </div>
-    <div class="fg"><label for="type" data-i18n="f_t">Téma</label><select id="type" name="type"><option value="partnership" data-i18n="o1">Partnerség / Szponzoráció</option><option value="collab" data-i18n="o2">Tartalmi együttműködés</option><option value="consulting" data-i18n="o3">Tanácsadás</option><option value="other" data-i18n="o4">Egyéb</option></select></div>
-    <div class="fg"><label for="message" data-i18n="f_m">Üzenet</label><textarea id="message" name="message" required data-i18n-ph="fp_m" placeholder="Írd le az ötleted..."></textarea></div>
-    <button type="submit" class="btn-sub" data-i18n="f_s">Küldés →</button>
-    <p class="f-privacy" data-i18n-html="f_priv">Az itt megadott adatok kizárólag a megkeresés megválaszolására kerülnek felhasználásra. Részletek az <a href="./privacy.html">Adatkezelési tájékoztatóban</a>.</p>
-    <div class="form-msg" id="formMsg"></div>
+    <input type="hidden" name="_subject" value="tamaskovacs.eu"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
+    <div class="f-row">
+      <div class="fg"><label for="name" data-i18n="f_n">Név</label><input type="text" id="name" name="name" required data-i18n-ph="fp_n" placeholder="A neved"></div>
+      <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="te@email.com" required></div>
+    </div>
+    <div class="fg"><label for="type" data-i18n="f_t">Téma</label><select id="type" name="type"><option value="partnership" data-i18n="o1">Partnerség / Szponzoráció</option><option value="collab" data-i18n="o2">Tartalmi együttműködés</option><option value="consulting" data-i18n="o3">Tanácsadás</option><option value="other" data-i18n="o4">Egyéb</option></select></div>
+    <div class="fg"><label for="message" data-i18n="f_m">Üzenet</label><textarea id="message" name="message" required data-i18n-ph="fp_m" placeholder="Írd le az ötleted..."></textarea></div>
+    <button type="submit" class="btn-sub" data-i18n="f_s">Küldés →</button>
+    <p class="f-privacy" data-i18n-html="f_priv">Az itt megadott adatok kizárólag a megkeresés megválaszolására kerülnek felhasználásra. Részletek az <a href="./privacy.html">Adatkezelési tájékoztatóban</a>.</p>
+    <div class="form-msg" id="formMsg"></div>
   </form>
 </div></div></section>
 
@@ -385,7 +387,7 @@ footer{padding:2rem 0;text-align:center;font-size:.6rem;color:var(--text3);lette
 
 
 <script>
-var T={hu:{n_about:"Rólam",n_build:"Projektek",n_del:"Portfólió",n_links:"Linkek",n_con:"Kapcsolat",h_sub:"Termék · Növekedés · Elosztás",h_desc:"Digitális termékeket építek és piacra viszek \u2014 stratégiától a launchig. Product, growth és distribution metszéspontján dolgozom.",s_fol:"követő",s_ship:"szállított termék",s_yr:"év a technológiában",ab_label:"Rólam",ab_title:"Mérnökből terméképítő & tartalomkészítő",ab_p1:"Telekommunikációs mérnökként indultam \u2014 részt vettem 4G hálózati megoldások fejlesztésében (segélyhívó rendszerek, NB-IoT). Később termékmenedzserként IoT smart parkingtól 5G magánhálózatokig, kiberbiztonsági portfóliókig szállítottam piacra termékeket.",ab_p2:"Ma saját termékeimet fejlesztem és tartalmat készítek. Ausztriában élek, több témában készítek videókat és magyarázom el, az engem érdeklő témákat, mint pl: osztrák hírek, kripto/befektetés, gazdaság, technológia, sport és utazás. A célom érthetően és tömören átadni, ami számít.",b_label:"Amin dolgozom",b_title:"Aktuális projektek",bt_pr:"Piaci briefek · Telegram",bd_pr:"Napi piaci összefoglaló magyarul \u2014 makró, gyorsjelentések, kriptó. Megspórolok neked 20 percet minden reggel.",bt_ar:"Osztrák élet magyarul · Hírlevél",bd_ar:"Osztrák hírek, adózás, egészségügy \u2014 magyarul, naponta. Az ausztriai magyaroknak szól.",cta_pr:"Csatlakozz a Piacradarhoz Telegramon \u2192",cta_ar:"Iratkozz fel a hírlevélre \u2192",d_label:"Portfólió",d_title:"Amit szállítottam",d_d5g_t:"5G Private Network portfólió & GTM \u2014 Drei Austria",d_d5g_o:"Ausztria első kereskedelmi 5G MPN",d_d5g_d:"Teljes go-to-market stratégia: vendor kiválasztás, folyamattervezés, dokumentáció és kereskedelmi indulás.",d_cy_t:"Gyermekvédelmi app \u2014 Cyan Security",d_cy_o:"MVP validálva, több ezer felhasználó",d_cy_d:"UI/UX fejlesztés, click-dummy validáció és felhasználói tesztelés. Digitális biztonsági termék családoknak.",d_v5g_t:"5G ipari magánhálózat \u2014 Vodafone Hungary",d_v5g_o:"Első ipari 5G MPN Magyarországon",d_v5g_d:"Ipari use case fejlesztés és Magyarország első B2B 5G magánhálózatának szállítása.",d_sp_t:"Smart Parking \u2014 Vodafone Hungary",d_sp_o:"100K+ letöltés, első a piacon",d_sp_d:"Teljes IoT termék: szenzorok, backend, API-k, mobilapp és dashboard. Magyarország első okos parkolási megoldása.",d_tel_t:"4G Core és segélyhívó rendszer \u2014 Telenor Hungary",d_tel_o:"eCall, 112, VoLTE",d_tel_d:"Segélyhívó hívásfolyamatok tervezése (eCall, 112) és VoLTE core network tesztelés.",co_label:"Kapcsolat",co_title:"Dolgozzunk együtt",co_sub:"Partnerség, szponzoráció, tartalmi együttműködés, tanácsadás.",f_n:"Név",f_t:"Téma",f_m:"Üzenet",f_s:"Küldés \u2192",o1:"Partnerség / Szponzoráció",o2:"Tartalmi együttműködés",o3:"Tanácsadás",o4:"Egyéb",fp_n:"A neved",fp_m:"Írd le az ötleted...",ft:"Készült Ausztriában",f_priv:"Az itt megadott adatok kizárólag a megkeresés megválaszolására kerülnek felhasználásra. Részletek az <a href='./privacy.html'>Adatkezelési tájékoztatóban</a>.",form_ok:"Köszönöm! Hamarosan válaszolok.",form_err:"Hiba történt. Próbáld újra."},en:{n_about:"About",n_build:"Projects",n_del:"Portfolio",n_links:"Links",n_con:"Contact",h_sub:"Product · Growth · Distribution",h_desc:"I build and ship digital products \u2014 from strategy to launch. I work across product, growth, and distribution.",s_fol:"followers",s_ship:"shipped products",s_yr:"years in technology",ab_label:"About",ab_title:"From Engineer to Product Builder & Creator",ab_p1:"I started as a telecom engineer \u2014 working on 4G network solutions including emergency call systems and NB-IoT. Later I moved into product management, shipping everything from IoT smart parking to 5G private networks and cybersecurity portfolios.",ab_p2:"Today I build my own products and create content. I live in Austria and cover a range of topics: Austrian news, crypto and investing, economics, tech, sports, and travel. My goal is to deliver what matters \u2014 clearly and concisely.",b_label:"What I'm building",b_title:"Current projects",bt_pr:"Market briefings · Telegram",bd_pr:"Daily market brief in Hungarian \u2014 macro, earnings, crypto. Saves you 20 minutes every morning.",bt_ar:"Austria in Hungarian · Newsletter",bd_ar:"Austrian news, taxes, healthcare \u2014 in Hungarian, daily. Made for Hungarians living in Austria.",cta_pr:"Join Piacradar on Telegram \u2192",cta_ar:"Subscribe to newsletter \u2192",d_label:"Portfolio",d_title:"What I've Shipped",d_d5g_t:"5G Private Network Portfolio & GTM \u2014 Drei Austria",d_d5g_o:"Austria's first commercial 5G MPN",d_d5g_d:"Full go-to-market strategy: vendor selection, process design, documentation, and commercial launch.",d_cy_t:"Child Protection App \u2014 Cyan Security",d_cy_o:"MVP validated, thousands of users",d_cy_d:"UI/UX development, click-dummy validation, and user testing. Digital safety product for families.",d_v5g_t:"5G Industrial Private Network \u2014 Vodafone Hungary",d_v5g_o:"First industrial 5G MPN in Hungary",d_v5g_d:"Enterprise use case development and delivery of Hungary's first B2B 5G private network.",d_sp_t:"Smart Parking \u2014 Vodafone Hungary",d_sp_o:"100K+ downloads, first-to-market",d_sp_d:"Full IoT product: sensors, backend, APIs, mobile app, dashboard. Hungary's first smart parking solution.",d_tel_t:"4G Core & Emergency Call System \u2014 Telenor Hungary",d_tel_o:"eCall, 112, VoLTE",d_tel_d:"Designed emergency call flows (eCall, 112) and tested VoLTE core network infrastructure.",co_label:"Contact",co_title:"Let's Work Together",co_sub:"Partnerships, sponsorships, content collaborations, consulting.",f_n:"Name",f_t:"Topic",f_m:"Message",f_s:"Send \u2192",o1:"Partnership / Sponsorship",o2:"Content Collaboration",o3:"Consulting",o4:"Other",fp_n:"Your name",fp_m:"Tell me your idea...",ft:"Built in Austria",f_priv:"The data submitted here is used solely to respond to your inquiry. Details in the <a href='./privacy.html'>Privacy Notice</a>.",form_ok:"Thanks! I'll get back to you soon.",form_err:"Something went wrong. Please try again."}};
+var T={hu:{n_about:"Rólam",n_build:"Projektek",n_del:"Portfólió",n_links:"Linkek",n_con:"Kapcsolat",h_sub:"Termék · Növekedés · Elosztás",h_desc:"Digitális termékeket építek és piacra viszek \u2014 stratégiától a launchig. Product, growth és distribution metszéspontján dolgozom.",s_fol:"követő",s_ship:"szállított termék",s_yr:"év a technológiában",ab_label:"Rólam",ab_title:"Mérnökből terméképítő & tartalomkészítő",ab_p1:"Telekommunikációs mérnökként indultam \u2014 részt vettem 4G hálózati megoldások fejlesztésében (segélyhívó rendszerek, NB-IoT). Később termékmenedzserként IoT smart parkingtól 5G magánhálózatokig, kiberbiztonsági portfóliókig szállítottam piacra termékeket.",ab_p2:"Ma saját termékeimet fejlesztem és tartalmat készítek. Ausztriában élek, több témában készítek videókat és magyarázom el, az engem érdeklő témákat, mint pl: osztrák hírek, kripto/befektetés, gazdaság, technológia, sport és utazás. A célom érthetően és tömören átadni, ami számít.",b_label:"Amin dolgozom",b_title:"Aktuális projektek",bt_pr:"Napi piaci összefoglalók · piacradar.eu",bd_pr:"Napi piaci összefoglaló magyarul \u2014 makró, gyorsjelentések, kriptó. Megspórolok neked 20 percet minden reggel.",bt_ar:"Osztrák élet magyarul · Hírlevél",bd_ar:"Osztrák hírek, adózás, egészségügy \u2014 magyarul, naponta. Az ausztriai magyaroknak szól.",cta_pr:"Irány a Piacradar \u2192",cta_ar:"Iratkozz fel a hírlevélre \u2192",d_label:"Portfólió",d_title:"Amit szállítottam",d_d5g_t:"5G Private Network portfólió & GTM \u2014 Drei Austria",d_d5g_o:"Ausztria első kereskedelmi 5G MPN",d_d5g_d:"Teljes go-to-market stratégia: vendor kiválasztás, folyamattervezés, dokumentáció és kereskedelmi indulás.",d_cy_t:"Gyermekvédelmi app \u2014 Cyan Security",d_cy_o:"MVP validálva, több ezer felhasználó",d_cy_d:"UI/UX fejlesztés, click-dummy validáció és felhasználói tesztelés. Digitális biztonsági termék családoknak.",d_v5g_t:"5G ipari magánhálózat \u2014 Vodafone Hungary",d_v5g_o:"Első ipari 5G MPN Magyarországon",d_v5g_d:"Ipari use case fejlesztés és Magyarország első B2B 5G magánhálózatának szállítása.",d_sp_t:"Smart Parking \u2014 Vodafone Hungary",d_sp_o:"100K+ letöltés, első a piacon",d_sp_d:"Teljes IoT termék: szenzorok, backend, API-k, mobilapp és dashboard. Magyarország első okos parkolási megoldása.",d_tel_t:"4G Core és segélyhívó rendszer \u2014 Telenor Hungary",d_tel_o:"eCall, 112, VoLTE",d_tel_d:"Segélyhívó hívásfolyamatok tervezése (eCall, 112) és VoLTE core network tesztelés.",co_label:"Kapcsolat",co_title:"Dolgozzunk együtt",co_sub:"Partnerség, szponzoráció, tartalmi együttműködés, tanácsadás.",f_n:"Név",f_t:"Téma",f_m:"Üzenet",f_s:"Küldés \u2192",o1:"Partnerség / Szponzoráció",o2:"Tartalmi együttműködés",o3:"Tanácsadás",o4:"Egyéb",fp_n:"A neved",fp_m:"Írd le az ötleted...",ft:"Készült Ausztriában",f_priv:"Az itt megadott adatok kizárólag a megkeresés megválaszolására kerülnek felhasználásra. Részletek az <a href='./privacy.html'>Adatkezelési tájékoztatóban</a>.",form_ok:"Köszönöm! Hamarosan válaszolok.",form_err:"Hiba történt. Próbáld újra."},en:{n_about:"About",n_build:"Projects",n_del:"Portfolio",n_links:"Links",n_con:"Contact",h_sub:"Product · Growth · Distribution",h_desc:"I build and ship digital products \u2014 from strategy to launch. I work across product, growth, and distribution.",s_fol:"followers",s_ship:"shipped products",s_yr:"years in technology",ab_label:"About",ab_title:"From Engineer to Product Builder & Creator",ab_p1:"I started as a telecom engineer \u2014 working on 4G network solutions including emergency call systems and NB-IoT. Later I moved into product management, shipping everything from IoT smart parking to 5G private networks and cybersecurity portfolios.",ab_p2:"Today I build my own products and create content. I live in Austria and cover a range of topics: Austrian news, crypto and investing, economics, tech, sports, and travel. My goal is to deliver what matters \u2014 clearly and concisely.",b_label:"What I'm building",b_title:"Current projects",bt_pr:"Daily market briefings · piacradar.eu",bd_pr:"Daily market brief in Hungarian \u2014 macro, earnings, crypto. Saves you 20 minutes every morning.",bt_ar:"Austria in Hungarian · Newsletter",bd_ar:"Austrian news, taxes, healthcare \u2014 in Hungarian, daily. Made for Hungarians living in Austria.",cta_pr:"Visit Piacradar \u2192",cta_ar:"Subscribe to newsletter \u2192",d_label:"Portfolio",d_title:"What I've Shipped",d_d5g_t:"5G Private Network Portfolio & GTM \u2014 Drei Austria",d_d5g_o:"Austria's first commercial 5G MPN",d_d5g_d:"Full go-to-market strategy: vendor selection, process design, documentation, and commercial launch.",d_cy_t:"Child Protection App \u2014 Cyan Security",d_cy_o:"MVP validated, thousands of users",d_cy_d:"UI/UX development, click-dummy validation, and user testing. Digital safety product for families.",d_v5g_t:"5G Industrial Private Network \u2014 Vodafone Hungary",d_v5g_o:"First industrial 5G MPN in Hungary",d_v5g_d:"Enterprise use case development and delivery of Hungary's first B2B 5G private network.",d_sp_t:"Smart Parking \u2014 Vodafone Hungary",d_sp_o:"100K+ downloads, first-to-market",d_sp_d:"Full IoT product: sensors, backend, APIs, mobile app, dashboard. Hungary's first smart parking solution.",d_tel_t:"4G Core & Emergency Call System \u2014 Telenor Hungary",d_tel_o:"eCall, 112, VoLTE",d_tel_d:"Designed emergency call flows (eCall, 112) and tested VoLTE core network infrastructure.",co_label:"Contact",co_title:"Let's Work Together",co_sub:"Partnerships, sponsorships, content collaborations, consulting.",f_n:"Name",f_t:"Topic",f_m:"Message",f_s:"Send \u2192",o1:"Partnership / Sponsorship",o2:"Content Collaboration",o3:"Consulting",o4:"Other",fp_n:"Your name",fp_m:"Tell me your idea...",ft:"Built in Austria",f_priv:"The data submitted here is used solely to respond to your inquiry. Details in the <a href='./privacy.html'>Privacy Notice</a>.",form_ok:"Thanks! I'll get back to you soon.",form_err:"Something went wrong. Please try again."}};
 var lang=localStorage.getItem('tk_lang')||'en';
 function setLang(l){lang=l;localStorage.setItem('tk_lang',l);document.documentElement.lang=l;var t=T[l];document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(t[k]!=null)el.textContent=t[k];});document.querySelectorAll('[data-i18n-html]').forEach(function(el){var k=el.getAttribute('data-i18n-html');if(t[k]!=null)el.innerHTML=t[k];});document.querySelectorAll('[data-i18n-ph]').forEach(function(el){var k=el.getAttribute('data-i18n-ph');if(t[k]!=null)el.placeholder=t[k];});document.querySelectorAll('.lang-btn').forEach(function(b){var a=b.dataset.lang===l;b.classList.toggle('active',a);b.setAttribute('aria-pressed',a);});}
 document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
